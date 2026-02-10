@@ -255,13 +255,11 @@ loadLines( "deepfake_lyrics_clean.txt", dfLyricsClean  );
 //==============================================================================
 true  => int cleanMode;        // start class-safe
 false => int isPaused;
-false => int glitchMode;
 0     => int triggerCount;
 0     => int dfTriggerCount;
-0.0   => float glitchAmount;
 
 now => time performanceStart;
-4::minute => dur TOTAL_DURATION;
+45::second => dur TOTAL_DURATION;
 
 // --- timing knobs (exposed in UI) ---
 UI_Float uiListenTime;   4.0 => uiListenTime.val;   // seconds of podcast to accumulate
@@ -271,7 +269,6 @@ UI_Int   uiK;            5   => uiK.val;              // KNN neighbors
 UI_Float uiPodVol;       0.85 => uiPodVol.val;        // podcast volume
 UI_Float uiRapVol;       0.85 => uiRapVol.val;        // rap clip volume
 UI_Bool  uiClean;        1   => uiClean.val;           // clean mode checkbox
-UI_Bool  uiGlitch;       0   => uiGlitch.val;          // glitch mode checkbox
 UI_Bool  uiPaused;       0   => uiPaused.val;          // pause toggle
 
 // current trigger display
@@ -325,13 +322,14 @@ false => int podVideoLoaded;
 GPlane podVideoPlane --> GG.scene();
 FlatMaterial podVidMat;
 podVideoPlane.mat(podVidMat);
-// Position: fills the blank area in main content (below text cards, above player bar)
-// Camera at z=8, FOV=45°. At z=0 visible area is ~10.86 x 6.62
-// Content area right of sidebar: x from ~-3.0 to 5.4, y from ~-2.6 to 3.3
-// Text cards occupy the top ~30%, so video starts around y≈1.0 downward
+// Position: fills the main content area (right of 280px sidebar, above 90px player bar)
+// Camera at z=8, FOV=45°. Full screen at z=0 ≈ 10.88 x 6.63
+// Content area in 3D coords: x ∈ [-3.06, 5.44], y ∈ [-2.55, 3.31]
+//   center ≈ (1.19, 0.38), usable size ≈ 8.0 x 5.0
+// 16:9 fit by width: w=7.6, h=7.6/1.778 ≈ 4.27
 // Negative scaY flips the video right-side up (UV origin fix)
-podVideoPlane.pos(@(1.2, -0.8, -0.5));
-podVideoPlane.sca(@(8.5, -3.8, 1.0));
+podVideoPlane.pos(@(0.8, -0.4, -0.5));
+podVideoPlane.sca(@(6.8, -3.82, 1.0));
 podVideoPlane.sca(@(0, 0, 0));        // hidden until video loads
 
 // ── Rap music video (flashes when a clip triggers) ──
@@ -344,8 +342,10 @@ false => int rapVideoLoaded;
 GPlane rapVideoPlane --> GG.scene();
 FlatMaterial rapVidMat;
 rapVideoPlane.mat(rapVidMat);
-// Same area as podcast video but in front (z=0.1), flipped with negative scaY
-rapVideoPlane.pos(@(1.2, -0.8, 0.1));
+// PiP in bottom-right of content area (not full screen)
+// Content bottom-right ≈ (5.44, -2.55). PiP: w=2.6, h=1.46 (16:9)
+// z=0.2 so it renders in front of podcast video (z=-0.5)
+rapVideoPlane.pos(@(2.38, -1.55, 0.2));
 rapVideoPlane.sca(@(0, 0, 0));  // hidden until triggered
 
 // ── Song index → rap video file mapping ──
@@ -416,7 +416,7 @@ fun void loadPodcastVideo( int idx )
     podVideo.rate(1.0);
     podVidMat.colorMap(podVideo.texture());
     true => podVideoLoaded;
-    podVideoPlane.sca(@(8.5, -3.8, 1.0));  // negative Y = right-side up
+    podVideoPlane.sca(@(6.8, -3.82, 1.0));  // 16:9, fits content area
     <<< "[video] Podcast video loaded!" >>>;
 }
 loadPodcastVideo(0);
@@ -455,73 +455,8 @@ fun void triggerRapVideo( string clipFile )
     }
 
     true => rapVideoLoaded;
-    rapVideoPlane.sca(@(8.5, -3.8, 1.0));  // negative Y = right-side up
+    rapVideoPlane.sca(@(1.6, -0.9, 1.0));  // PiP size, 16:9 aspect ratio
     4.0 => rapVideoLife;  // show for 4 seconds
-}
-
-//--- floating lyric particles (behind UI) ---
-8 => int MAX_LYRICS;
-GText lyricTexts[MAX_LYRICS];
-float lyricLife[MAX_LYRICS];
-float lyricVelY[MAX_LYRICS];
-for( int i; i < MAX_LYRICS; i++ )
-{
-    lyricTexts[i] --> GG.scene();
-    lyricTexts[i].text("");
-    lyricTexts[i].sca(@(0.5, 0.5, 0.5));
-    0.0 => lyricLife[i];
-}
-0 => int nextLyric;
-
-//--- ripple circles ---
-8 => int MAX_RIPPLES;
-GCircle ripples[MAX_RIPPLES];
-float rippleLife[MAX_RIPPLES];
-for( int i; i < MAX_RIPPLES; i++ )
-{
-    ripples[i] --> GG.scene();
-    ripples[i].sca(@(0.01, 0.01, 0.01));
-    0.0 => rippleLife[i];
-}
-0 => int nextRipple;
-
-//--- glitch cubes ---
-20 => int MAX_PARTICLES;
-GCube particles[MAX_PARTICLES];
-float particleLife[MAX_PARTICLES];
-for( int i; i < MAX_PARTICLES; i++ )
-{
-    particles[i] --> GG.scene();
-    particles[i].sca(@(0.0, 0.0, 0.0));
-    0.0 => particleLife[i];
-}
-0 => int nextParticle;
-
-// spawn helpers
-fun void spawnLyric( string text, float rmsVal )
-{
-    lyricTexts[nextLyric].text(text);
-    lyricTexts[nextLyric].pos(@(Math.random2f(-4.5, 4.5), Math.random2f(-2.0, 2.5), 0));
-    lyricTexts[nextLyric].sca(@(0.35 + rmsVal * 2.5, 0.35 + rmsVal * 2.5, 1.0));
-    4.0 => lyricLife[nextLyric];
-    Math.random2f(0.2, 0.8) => lyricVelY[nextLyric];
-    (nextLyric + 1) % MAX_LYRICS => nextLyric;
-}
-fun void spawnRipple( float x, float y )
-{
-    ripples[nextRipple].pos(@(x, y, -0.1));
-    ripples[nextRipple].sca(@(0.1, 0.1, 0.1));
-    3.0 => rippleLife[nextRipple];
-    (nextRipple + 1) % MAX_RIPPLES => nextRipple;
-}
-fun void spawnGlitchParticle()
-{
-    particles[nextParticle].pos(
-        @(Math.random2f(-5,5), Math.random2f(-3,3), Math.random2f(-1,1)));
-    particles[nextParticle].sca(
-        @(Math.random2f(0.05,0.25), Math.random2f(0.05,0.25), Math.random2f(0.01,0.08)));
-    1.5 => particleLife[nextParticle];
-    (nextParticle + 1) % MAX_PARTICLES => nextParticle;
 }
 
 
@@ -567,7 +502,6 @@ fun void uiLoop()
 
         // ── Sync UI state → engine state ──
         uiClean.val()  => cleanMode;
-        uiGlitch.val() => glitchMode;
         uiK.val()      => K;
         if( K < 1 ) 1 => K;
         uiPodVol.val()  => podGain.gain;
@@ -595,7 +529,7 @@ fun void uiLoop()
         // ── 3D scene bg (dark, behind opaque UI) ──
         GG.scene().backgroundColor(@(0.04, 0.04, 0.05));
 
-        // ── Update 3D lyric/ripple/particle + video systems ──
+        // ── Update video systems ──
 
         // Rap video fade-out
         if( rapVideoLife > 0 )
@@ -607,31 +541,6 @@ fun void uiLoop()
                 false => rapVideoLoaded;
             }
         }
-
-        for( int i; i < MAX_LYRICS; i++ )
-        {
-            if( lyricLife[i] > 0 )
-            {
-                dt -=> lyricLife[i];
-                lyricTexts[i].posY( lyricTexts[i].posY() + lyricVelY[i] * dt );
-                lyricTexts[i].sca( lyricTexts[i].sca() * (1.0 - dt * 0.2) );
-                if( glitchMode || p > 0.5 )
-                    lyricTexts[i].posX(
-                        lyricTexts[i].posX() + Math.random2f(-0.02, 0.02) * p * 4);
-            }
-            else { lyricTexts[i].text(""); }
-        }
-        for( int i; i < MAX_RIPPLES; i++ )
-        {
-            if( rippleLife[i] > 0 ) { dt -=> rippleLife[i]; ripples[i].sca(ripples[i].sca()+@(dt*1.8,dt*1.8,0)); }
-            else { ripples[i].sca(@(0,0,0)); }
-        }
-        for( int i; i < MAX_PARTICLES; i++ )
-        {
-            if( particleLife[i] > 0 ) { dt -=> particleLife[i]; particles[i].posY(particles[i].posY()+dt*Math.random2f(-1,1)); particles[i].rotZ(particles[i].rotZ()+dt*3.0); }
-            else { particles[i].sca(@(0,0,0)); }
-        }
-        if( p > 0.35 && Math.random2f(0,1) < p * 0.25 ) spawnGlitchParticle();
 
         // ================================================================
         //  GLOBAL SPOTIFY STYLE OVERRIDES
@@ -806,9 +715,6 @@ fun void uiLoop()
                     UI.setNextItemWidth(sliderW);
                     UI.slider("K##sl", uiK, 1, 15);
 
-                    UI.dummy(@(0, 4));
-                    UI.checkbox("Glitch Mode", uiGlitch);
-
                     UI.dummy(@(0, 8));
                     UI.pushStyleColor(UI_Color.Button, @(0.157, 0.157, 0.157, 1.0));
                     if( UI.button("Reset Timer", @(sliderW, 28)) )
@@ -866,13 +772,13 @@ fun void uiLoop()
                 UI.sameLine(0, 20);
                 UI.checkbox("Clean Mode", uiClean);
 
-                UI.dummy(@(0, 20));
+                UI.dummy(@(0, 8));
 
                 // ── Escalation progress card ──
                 win.x - SIDEBAR_W - 88 => float cardW;
                 UI.pushStyleColor(UI_Color.ChildBg, cardBg);
-                UI.pushStyleVar(UI_StyleVar.WindowPadding, @(20, 16));
-                if( UI.beginChild("##esc_card", @(cardW, 72), false, 0) )
+                UI.pushStyleVar(UI_StyleVar.WindowPadding, @(12, 8));
+                if( UI.beginChild("##esc_card", @(cardW, 44), false, 0) )
                 {
                     UI.pushStyleVar(UI_StyleVar.FrameRounding, 4.0);
                     UI.setNextItemWidth(cardW - 48);
@@ -893,12 +799,12 @@ fun void uiLoop()
                 UI.popStyleVar(1);
                 UI.popStyleColor(1);
 
-                UI.dummy(@(0, 16));
+                UI.dummy(@(0, 6));
 
                 // ── "Now Dissing" / Last diss card ──
                 UI.pushStyleColor(UI_Color.ChildBg, cardBg);
-                UI.pushStyleVar(UI_StyleVar.WindowPadding, @(20, 16));
-                if( UI.beginChild("##diss_card", @(cardW, 140), false, 0) )
+                UI.pushStyleVar(UI_StyleVar.WindowPadding, @(12, 8));
+                if( UI.beginChild("##diss_card", @(cardW, 80), false, 0) )
                 {
                     if( isPlayingClip )
                     {
@@ -923,16 +829,15 @@ fun void uiLoop()
 
                     if( lastLyric != "" )
                     {
-                        UI.dummy(@(0, 8));
+                        UI.dummy(@(0, 2));
                         UI.textWrapped("\"" + lastLyric + "\"");
-                        UI.dummy(@(0, 4));
                         UI.pushStyleColor(UI_Color.Text, textSecondary);
                         UI.text(lastClipFile);
                         UI.popStyleColor(1);
                     }
                     else
                     {
-                        UI.dummy(@(0, 12));
+                        UI.dummy(@(0, 4));
                         UI.pushStyleColor(UI_Color.Text, textMuted);
                         UI.text("Listening to podcast...");
                         UI.popStyleColor(1);

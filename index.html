@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Programming Project #2</title>
+    <title>Deepfake Diss Track — HW2</title>
 
     <style>
       /* Simple, clean defaults */
@@ -94,18 +94,49 @@
         padding: 12px;
         margin: 10px 0 0;
       }
+
+      pre {
+        background: #f5f5f5;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 14px;
+        overflow-x: auto;
+        font-size: 13px;
+        line-height: 1.5;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      }
+
+      details { margin: 10px 0; }
+      details summary {
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 14px;
+        color: #333;
+        padding: 6px 0;
+      }
+
+      ul { margin: 6px 0 12px; padding-left: 22px; }
+      h3 { margin: 20px 0 8px; font-size: 17px; }
     </style>
   </head>
 
   <body>
     <div class="wrap">
-      <h1>Programming Project #2</h1>
+      <h1>Deepfake Diss Track</h1>
 
       <p class="byline">
-        <b>Jenny Li</b> •
-        <a href="mailto:jennyl06@ccrma.stanford.edu"
-          >jennyl06@ccrma.stanford.edu</a
-        >
+        <b>Ryan Rong</b> &bull;
+        CS 470 / Music 356 &bull; Winter 2026 &bull;
+        <a href="https://ccrma.stanford.edu/courses/356-winter-2026/">Featured Artist</a>
+      </p>
+
+      <p>
+        <em>Deepfake Diss Track</em> is a real-time audiovisual performance
+        where a serious AI deepfake podcast is constantly interrupted by
+        KNN-matched rap clips. Over time, the real clips morph into
+        AI-generated deepfake versions (Grok Voice TTS), visuals escalate,
+        and the podcast drowns in its own cloned commentary. Built in ChucK
+        + ChuGL with a Spotify-style ImGui interface.
       </p>
 
       <!-- PHASE ONE -->
@@ -182,6 +213,84 @@
           <b>#2</b> (~0.399), and <b>#3</b> (~0.397). The “all features” run
           <b>#6</b> dropped (~0.104).
         </p>
+
+        <h3>Phase 1 Code</h3>
+
+        <details>
+          <summary>feature-extract.ck &mdash; GTZAN Feature Extraction</summary>
+          <pre>"data/result.txt" =&gt; string OUTPUT_FILE;
+if( me.args() &gt; 0 ) me.arg(0) =&gt; OUTPUT_FILE;
+
+SndBuf audioFile =&gt; FFT fft;
+FeatureCollector combo =&gt; blackhole;
+fft =^ Centroid centroid =^ combo;
+fft =^ Flux flux =^ combo;
+fft =^ RMS rms =^ combo;
+// fft =^ MFCC mfcc =^ combo;   // uncomment per config
+// fft =^ Chroma chroma =^ combo;
+// fft =^ RollOff rolloff =^ combo;
+// fft =^ ZeroX zerox =^ combo;
+
+13 =&gt; mfcc.numCoeffs;
+26 =&gt; mfcc.numFilters;
+combo.upchuck();
+combo.fvals().size() =&gt; int NUM_DIMENSIONS;
+2048 =&gt; fft.size;
+Windowing.hann(fft.size()) =&gt; fft.window;
+2048::samp =&gt; dur HOP;
+
+["blues","classical","country","disco","hiphop",
+ "jazz","metal","pop","reggae","rock"] @=&gt; string labels[];
+100 =&gt; int NUM_EXAMPLES_PER_LABEL;
+30::second =&gt; dur EXTRACT_TIME;
+(EXTRACT_TIME / HOP) $ int =&gt; int numFrames;
+"data/gtzan/genres_original/" =&gt; string PATH;
+
+// iterates labels x examples, extracts averaged feature vector per file
+// output format: val1 val2 ... valN label</pre>
+        </details>
+
+        <details>
+          <summary>genre-classify.ck &mdash; Real-time KNN Genre Classifier</summary>
+          <pre>adc =&gt; FFT fft;
+FeatureCollector combo =&gt; blackhole;
+fft =^ Centroid centroid =^ combo;
+fft =^ Flux flux =^ combo;
+fft =^ RMS rms =^ combo;
+fft =^ MFCC mfcc =^ combo;
+20 =&gt; mfcc.numCoeffs; 10 =&gt; mfcc.numFilters;
+
+KNN2 knn;  10 =&gt; int K;
+knn.train( inFeatures, inLabelsInt );
+
+while( true ) {
+    // aggregate features over 0.5s, compute mean, predict
+    knn.predict( featureMean, K, knnResult );
+    // print per-label probabilities
+}</pre>
+        </details>
+
+        <details>
+          <summary>x-validate.ck &mdash; K-Fold Cross Validation</summary>
+          <pre>KNN2 knn;  10 =&gt; int K;
+20 =&gt; int numFolds;  4 =&gt; int numTestFolds;
+
+// normalizeData() -- min-max normalization per dimension
+// shuffleData()   -- Fisher-Yates shuffle
+// prepareData(fold) -- split into train/test sets
+
+for( 0 =&gt; int i; i &lt; numFolds / numTestFolds; i++ ) {
+    prepareData( i );
+    knn.train( trainFeatures, trainLabelsInt );
+    0.0 =&gt; float accuracy;
+    for( 0 =&gt; int j; j &lt; testLabelsInt.size(); j++ ) {
+        knn.predict( testFeatures[j], K, knnResult );
+        knnResult[ testLabelsInt[j] ] +=&gt; accuracy;
+    }
+    chout &lt;= "fold " + i + " accuracy: "
+          + ( accuracy / testLabelsInt.size() ) &lt;= IO.newline();
+}</pre>
+        </details>
       </div>
 
       <!-- PHASE TWO -->
@@ -212,7 +321,239 @@
             allowfullscreen
           ></iframe>
         </div>
+
+        <h3>Phase 2 Code</h3>
+
+        <details>
+          <summary>mosaic-extract.ck &mdash; Feature Extraction for Sound Database</summary>
+          <pre>SndBuf audioFile =&gt; FFT fft;
+FeatureCollector combo =&gt; blackhole;
+fft =^ Centroid centroid =^ combo;
+fft =^ Flux flux =^ combo;
+fft =^ RMS rms =^ combo;
+fft =^ MFCC mfcc =^ combo;
+20 =&gt; mfcc.numCoeffs; 10 =&gt; mfcc.numFilters;
+4096 =&gt; fft.size;
+(fft.size()/2)::samp =&gt; dur HOP;
+4 =&gt; int NUM_FRAMES;
+
+// for each file: slide analysis window, extract averaged features
+// output format: filePath windowTime val1 val2 ... valN</pre>
+        </details>
+
+        <details>
+          <summary>mosaic-synth-file.ck &mdash; Real-time Mosaic Synthesizer</summary>
+          <pre>SndBuf input =&gt; FFT fft;
+input =&gt; Delay delay =&gt; Gain g =&gt; dac.left;
+100::ms =&gt; delay.max =&gt; delay.delay;
+
+16 =&gt; int NUM_VOICES;
+SndBuf buffers[NUM_VOICES];
+ADSR envs[NUM_VOICES];
+
+KNN2 knn;  10 =&gt; int K;
+knn.train( inFeatures, uids );
+
+while( true ) {
+    // aggregate features, compute mean
+    knn.search( featureMean, K, knnResult );
+    spork ~ synthesize( knnResult[Math.random2(0,K-1)] );
+}</pre>
+        </details>
       </div>
+
+      <!-- PHASE THREE -->
+      <div class="section">
+        <h2>Phase 3: Deepfake Diss Track</h2>
+
+        <p>
+          A podcast host discusses the dangers of AI deepfakes. But the very
+          technology they&rsquo;re warning about <em>fights back</em>&mdash;KNN-matched
+          rap clips interrupt the host, and over time these clips morph into
+          AI-generated deepfake versions of themselves (cloned via the Grok
+          Voice API). The performance has three acts:
+        </p>
+        <ul>
+          <li><b>Act 1 (0&ndash;25%):</b> Podcast plays mostly uninterrupted. Occasional real rap clips trigger subtly.</li>
+          <li><b>Act 2 (25&ndash;70%):</b> Rap clips fire more frequently. Deepfake versions begin replacing originals. Floating lyrics, ripple circles, and glitch particles escalate.</li>
+          <li><b>Act 3 (70&ndash;100%):</b> Total audiovisual meltdown. Deepfakes dominate. The podcast is drowned out by its own cloned commentary.</li>
+        </ul>
+
+        <p>
+          The data pipeline (<code>setup.py</code>) downloads 40 rap songs,
+          chops them into 905 lyric-aligned clips via the Grok Voice API,
+          downloads 8 deepfake podcasts, generates 737 AI deepfake clones
+          via Grok Voice TTS, and extracts features with ChucK. The performance
+          itself is a 1,391-line ChucK program with a Spotify-style ChuGL
+          ImGui interface including podcast selector, transport controls, lyrics
+          display, clean/explicit toggle, and interactive sliders.
+        </p>
+
+        <h3>How to Run</h3>
+        <pre>cd phase-3-performance
+uv sync
+uv run python setup.py        # full data pipeline
+chuck deepfake-diss.ck:rap_db.txt</pre>
+
+        <h3>Interactive Controls</h3>
+        <table>
+          <tr><th>Control</th><th>Description</th></tr>
+          <tr><td>Podcast Library (sidebar)</td><td>Click to switch between 8 deepfake podcasts</td></tr>
+          <tr><td>Play / Pause</td><td>Transport controls in bottom bar</td></tr>
+          <tr><td>Clean Mode</td><td>Toggle explicit/clean rap clip database</td></tr>
+          <tr><td>Listen Time</td><td>Seconds of podcast to accumulate before KNN search</td></tr>
+          <tr><td>Threshold</td><td>Similarity threshold for triggering clips</td></tr>
+          <tr><td>K</td><td>Number of nearest neighbors</td></tr>
+          <tr><td>Volume sliders</td><td>Independent podcast and rap volume</td></tr>
+          <tr><td>Glitch Mode</td><td>Force maximum visual chaos</td></tr>
+        </table>
+
+        <h3>Phase 3 Code</h3>
+
+        <details>
+          <summary>deepfake-diss.ck &mdash; ChuGL Performance (1,391 lines)</summary>
+          <pre>// deepfake-diss.ck -- Phase 3 "Deepfake Diss Track"
+// USAGE: chuck deepfake-diss.ck:rap_db.txt
+
+// Audio Pipeline
+SndBuf podcast =&gt; Gain podGain =&gt; dac;
+podcast =&gt; FFT fft;
+FeatureCollector combo =&gt; blackhole;
+fft =^ Centroid centroid =^ combo;
+fft =^ Flux flux =^ combo;
+fft =^ RMS rms =^ combo;
+fft =^ MFCC mfcc =^ combo;
+SndBuf rapBuf =&gt; ADSR rapEnv =&gt; Gain rapGain =&gt; dac;
+
+// KNN
+KNN2 knn;  5 =&gt; int K;
+knn.train( inFeatures, uids );
+
+// Performance state -- 3-act escalation
+now =&gt; time performanceStart;
+4::minute =&gt; dur TOTAL_DURATION;
+
+// ChuGL scene
+GWindow.windowed(1280, 780);
+GText lyricTexts[8];    // floating lyrics
+GCircle ripples[8];     // expanding ripples
+GCube particles[20];    // glitch cubes
+
+// Spotify-style ImGui UI (sidebar, transport, lyrics,
+// clean/explicit toggle, sliders)
+
+// Main loop: accumulate features -&gt; KNN search -&gt;
+// trigger clip or deepfake based on act -&gt; spawn visuals</pre>
+        </details>
+
+        <details>
+          <summary>extract-rap-db.ck &mdash; Rap Clip Feature Extraction</summary>
+          <pre>// extract-rap-db.ck -- feature extraction for rap/deepfake database
+// USAGE: chuck --silent extract-rap-db.ck:INPUT:OUTPUT
+
+"rap-clips.txt" =&gt; string INPUT;
+"rap_db.txt" =&gt; string OUTPUT_FILE;
+
+SndBuf audioFile =&gt; FFT fft;
+FeatureCollector combo =&gt; blackhole;
+fft =^ Centroid centroid =^ combo;
+fft =^ Flux flux =^ combo;
+fft =^ RMS rms =^ combo;
+fft =^ MFCC mfcc =^ combo;
+20 =&gt; mfcc.numCoeffs; 10 =&gt; mfcc.numFilters;
+4096 =&gt; fft.size;
+(fft.size()/2)::samp =&gt; dur HOP;
+4 =&gt; int NUM_FRAMES;
+
+// extractTrajectory() -- windowed features per clip
+// parseInput() -- handles .wav or .txt file lists</pre>
+        </details>
+
+        <details>
+          <summary>setup.py &mdash; Data Pipeline (1,404 lines)</summary>
+          <pre># setup.py -- All-in-one pipeline for Phase 3
+# USAGE:
+#   uv run python setup.py           # full pipeline
+#   uv run python setup.py --quick   # minimum (steps 1,2,3,5,8)
+#   uv run python setup.py --status  # check progress
+#
+# STEPS:
+#   1. Download 40 rap songs          (yt-dlp)
+#   2. Lyrics + Grok align + chop    (lyrics API + Grok Voice)
+#   3. Download 8 podcasts            (yt-dlp)
+#   4. Download music videos          (yt-dlp + ffmpeg)
+#   5. Extract rap features           (ChucK)
+#   6. Generate 737 deepfake clips    (Grok Voice TTS)
+#   7. Re-align lyrics                (Grok Voice transcription)
+#   8. Filter clean/explicit          (regex)
+#   9. Extract deepfake features      (ChucK)</pre>
+        </details>
+      </div>
+
+      <!-- REFLECTION -->
+      <div class="section">
+        <h2>Reflection</h2>
+
+        <p>
+          This project started as a meme soundboard that interrupted podcasts
+          with Vine booms and &ldquo;bruh&rdquo; sound effects. After the
+          milestone critique, classmates pushed me to think bigger: what if the
+          interruptions actually <em>meant</em> something? That feedback led to
+          the deepfake pivot. Instead of random memes, the system now interrupts
+          a podcast <em>about</em> AI deepfakes with AI-cloned rap, making the
+          medium the message.
+        </p>
+        <p>
+          The biggest technical challenge was aligning rap clips to lyrics. I
+          needed sub-second timestamps for 40 songs, but no free API provides
+          word-level timing. My solution was a three-layer approach: fetch lyrics
+          from Musixmatch, use the Grok text API to select the most quotable
+          lines, then send 10-second overlapping audio segments to the Grok Voice
+          API for transcription and fuzzy-match the lyrics against the
+          transcripts. When Grok was unavailable, I fell back to librosa onset
+          detection. This pipeline took the most iteration&mdash;the fuzzy
+          matching alone went through five versions before the confidence scores
+          were reliable.
+        </p>
+        <p>
+          The ChuGL UI was both the most rewarding and most frustrating part.
+          ImGui has no custom fonts, no image widgets, and no draw-list access in
+          ChucK&rsquo;s build, so replicating Spotify meant creative workarounds:
+          colored buttons as album art, progress bars as seek bars, and careful
+          color/spacing to sell the illusion. The moment the 3D lyrics, ripple
+          circles, and podcast video rendered behind the UI panels simultaneously
+          was genuinely exciting.
+        </p>
+        <p>
+          The main limitation is latency: accumulating enough audio for a
+          meaningful feature vector (2&ndash;4 seconds) means triggers always
+          feel slightly delayed. A shorter window produces noisier matches. I
+          also could not control which Grok voice persona sounded most like each
+          rapper&mdash;some deepfakes sound eerily close, others are clearly
+          synthetic, which accidentally reinforces the theme of imperfect
+          imitation.
+        </p>
+      </div>
+
+      <!-- ACKNOWLEDGEMENTS -->
+      <div class="section">
+        <h2>Acknowledgements</h2>
+
+        <ul>
+          <li><b>Prof. Ge Wang</b> &mdash; Course design, ChAI/ChucK/ChuGL framework, sample code</li>
+          <li><b>Yikai Li</b> &mdash; Feature extraction and KNN starter code</li>
+          <li><b>Classmates</b> (Michelle, Anthony, Kalu, Sid, Richard, Calvin, Lejun, Tae Kyu, and the entire class) &mdash; Milestone critique that shaped the deepfake pivot, ripple idea, slider controls, and bidirectional mosaic concept</li>
+          <li><b>ChucK</b> (audio engine), <b>ChuGL</b> (graphics + ImGui), <b>librosa</b> (onset detection), <b>yt-dlp</b> (downloads), <b>ffmpeg</b> (conversion)</li>
+          <li><b>xAI Grok API</b> &mdash; Voice TTS for deepfake generation, audio transcription for lyric alignment, text API for phrase selection</li>
+          <li><b>Musixmatch</b> (via lewdhutao lyrics proxy) &mdash; Lyrics fetching</li>
+          <li><b>Source audio:</b> 40 rap songs from Kendrick Lamar, Drake, J. Cole, Travis Scott, Tupac, Biggie, Eminem, Kanye West, Nas, Jay-Z, and others (YouTube, fair use for educational purposes); 8 podcasts from WSJ, TED, CNBC, CBS, BBC, VICE, Vox, NBC</li>
+          <li><b>GTZAN dataset</b> &mdash; 1,000 clips across 10 genres (Phase 1)</li>
+          <li><a href="https://ccrma.stanford.edu/courses/356-winter-2026/code/featured-artist/">Course sample code</a>,
+              <a href="https://chuck.stanford.edu/chugl/">ChuGL documentation</a>,
+              <a href="https://chuck.stanford.edu/chugl/examples/basic/video.ck">ChuGL video.ck example</a></li>
+        </ul>
+      </div>
+
     </div>
   </body>
 </html>

@@ -1,26 +1,8 @@
-//------------------------------------------------------------------------------
-// name: deepfake-diss.ck
-// desc: Phase 3 — "Deepfake Diss Track" performance
-//
-//       A serious AI deepfake podcast is interrupted by rap clips matched
-//       via KNN.  Over time real clips morph into AI deepfake versions.
-//       Full Spotify-style ImGui UI with podcast selector, transport,
-//       lyrics display, and clean/explicit toggle.
-//
-// USAGE:
-//   chuck deepfake-diss.ck:RAP_DB
-//     RAP_DB = rap_db.txt (feature vectors from extract-rap-db.ck)
-//
-// EXAMPLE:
-//   chuck deepfake-diss.ck:rap_db.txt
-//
-// date: February 2026
-//------------------------------------------------------------------------------
+// deepfake-diss.ck
+// "Deepfake Diss Track" — podcast interrupted by KNN-matched rap clips
+// that gradually morph into AI deepfake versions.
+// usage: chuck deepfake-diss.ck:rap_db.txt
 
-
-//==============================================================================
-//  COMMAND LINE ARGS
-//==============================================================================
 string FEATURES_FILE;
 if( me.args() >= 1 ) me.arg(0) => FEATURES_FILE;
 else
@@ -30,16 +12,14 @@ else
 }
 
 
-//==============================================================================
-//  PODCAST LIBRARY  (user selects from UI)
-//==============================================================================
+// podcast library
 class PodcastInfo
 {
     string file;
     string title;
     string subtitle;
     string host;
-    string videoFile;  // podcast_videos/podcast_xxx.mpg (or "")
+    string videoFile;
     fun void set( string f, string t, string s, string h )
     { f => file; t => title; s => subtitle; h => host; "" => videoFile; }
     fun void setWithVideo( string f, string t, string s, string h, string v )
@@ -48,8 +28,7 @@ class PodcastInfo
 
 PodcastInfo podLib[0];
 {
-    // --- populate podcast list from directory ---
-    // The WSJ one is always first
+    // WSJ always first
     PodcastInfo p;
     FileIO vidTest;
     if( vidTest.open( me.dir() + "podcast_videos/podcast_wsj.mpg", FileIO.READ ) )
@@ -70,7 +49,7 @@ PodcastInfo podLib[0];
     }
     podLib << p;
 }
-// try to load optional extra podcasts (auto-detect matching video)
+// try loading extra podcasts, auto-detect matching video
 fun void tryAddPodcast( string file, string title, string sub, string host )
 {
     FileIO test;
@@ -78,7 +57,6 @@ fun void tryAddPodcast( string file, string title, string sub, string host )
     {
         test.close();
         PodcastInfo p;
-        // derive video filename: podcast_xxx.wav → podcast_videos/podcast_xxx.mpg
         file.substring(0, file.length() - 4) => string base;
         "podcast_videos/" + base + ".mpg" => string vidPath;
         FileIO vidTest;
@@ -138,19 +116,15 @@ false => int podcastSwitchRequested;
 0 => int pendingPodcastIdx;
 
 
-//==============================================================================
-//  AUDIO PIPELINE
-//==============================================================================
-
-// Podcast → analysis + output
+// audio pipeline
 SndBuf podcast => Gain podGain => dac;
 podcast => FFT fft;
 
-// load the first podcast
+// load first podcast
 me.dir() + podLib[0].file => podcast.read;
 0.85 => podGain.gain;
 
-// feature extraction (same as extraction script: centroid+flux+rms+mfcc20)
+// feature extraction (centroid + flux + rms + mfcc20)
 FeatureCollector combo => blackhole;
 fft =^ Centroid centroid =^ combo;
 fft =^ Flux flux =^ combo;
@@ -160,26 +134,21 @@ fft =^ MFCC mfcc =^ combo;
 20 => mfcc.numCoeffs;
 10 => mfcc.numFilters;
 
-// FFT settings
 4096 => fft.size;
 fft.size() => podcast.chunks;
 Windowing.hann(fft.size()) => fft.window;
 (fft.size()/2)::samp => dur HOP;
 
-// get dimension count
 combo.upchuck();
 combo.fvals().size() => int NUM_DIMENSIONS;
 
-
-// --- Single rap voice (sequential, non-overlapping) ---
+// rap voice output (sequential, non-overlapping)
 SndBuf rapBuf => ADSR rapEnv => Gain rapGain => dac;
 0.85 => rapGain.gain;
 rapEnv.set( 30::ms, 100::ms, 1.0, 60::ms );
 
 
-//==============================================================================
-//  LOAD FEATURE DATABASE + KNN
-//==============================================================================
+// load feature database + KNN
 0 => int numPoints;
 0 => int numCoeffs;
 
@@ -215,9 +184,7 @@ int knnResult[K];
 knn.train( inFeatures, uids );
 
 
-//==============================================================================
-//  LOAD LYRICS + DEEPFAKE CLIPS  (both clean & explicit variants)
-//==============================================================================
+// load lyrics + deepfake clip lists (clean & explicit variants)
 string rapLyricsAll[0];
 string rapLyricsClean[0];
 string dfClipsAll[0];
@@ -250,10 +217,8 @@ loadLines( "deepfake_lyrics_clean.txt", dfLyricsClean  );
 <<< "[data] deepfakes:", dfClipsAll.size(), "all /", dfClipsClean.size(), "clean" >>>;
 
 
-//==============================================================================
-//  PERFORMANCE STATE
-//==============================================================================
-true  => int cleanMode;        // start class-safe
+// performance state
+true  => int cleanMode;
 false => int isPaused;
 0     => int triggerCount;
 0     => int dfTriggerCount;
@@ -261,15 +226,15 @@ false => int isPaused;
 now => time performanceStart;
 45::second => dur TOTAL_DURATION;
 
-// --- timing knobs (exposed in UI) ---
-UI_Float uiListenTime;   4.0 => uiListenTime.val;   // seconds of podcast to accumulate
-UI_Float uiCooldown;     1.0 => uiCooldown.val;      // gap after clip finishes
-UI_Float uiThreshold;    0.6 => uiThreshold.val;      // similarity threshold
-UI_Int   uiK;            5   => uiK.val;              // KNN neighbors
-UI_Float uiPodVol;       0.85 => uiPodVol.val;        // podcast volume
-UI_Float uiRapVol;       0.85 => uiRapVol.val;        // rap clip volume
-UI_Bool  uiClean;        1   => uiClean.val;           // clean mode checkbox
-UI_Bool  uiPaused;       0   => uiPaused.val;          // pause toggle
+// UI-exposed timing knobs
+UI_Float uiListenTime;   4.0 => uiListenTime.val;
+UI_Float uiCooldown;     1.0 => uiCooldown.val;
+UI_Float uiThreshold;    0.6 => uiThreshold.val;
+UI_Int   uiK;            5   => uiK.val;
+UI_Float uiPodVol;       0.85 => uiPodVol.val;
+UI_Float uiRapVol;       0.85 => uiRapVol.val;
+UI_Bool  uiClean;        1   => uiClean.val;
+UI_Bool  uiPaused;       0   => uiPaused.val;
 
 // current trigger display
 "" => string lastLyric;
@@ -278,10 +243,7 @@ UI_Bool  uiPaused;       0   => uiPaused.val;          // pause toggle
 false => int   lastWasDeepfake;
 0.0   => float lastTriggerTime;
 
-fun float progress()
-{
-    return Math.min(1.0, (now - performanceStart) / TOTAL_DURATION);
-}
+fun float progress() { return Math.min(1.0, (now - performanceStart) / TOTAL_DURATION); }
 fun int currentAct()
 {
     progress() => float p;
@@ -290,7 +252,7 @@ fun int currentAct()
     return 3;
 }
 
-// active-mode helpers
+// clean/explicit mode helpers
 fun string[] activeLyrics()
 { if( cleanMode ) return rapLyricsClean; return rapLyricsAll; }
 fun string[] activeDfClips()
@@ -299,62 +261,46 @@ fun string[] activeDfLyrics()
 { if( cleanMode ) return dfLyricsClean; return dfLyricsAll; }
 
 
-//==============================================================================
-//  ChuGL WINDOW + SCENE SETUP
-//==============================================================================
+// ChuGL window + scene
 GWindow.windowed(1280, 780);
 GWindow.title("DEEPFAKE DISS TRACK");
 
 GCamera cam --> GG.scene();
 cam.pos(@(0, 0, 8));
 cam.lookAt(@(0, 0, 0));
-GG.scene().backgroundColor(@(0.071, 0.071, 0.071));  // #121212 matches Spotify dark
+GG.scene().backgroundColor(@(0.071, 0.071, 0.071));
 
-//==============================================================================
-//  VIDEO PLANES (podcast video + rap music video, shown in 3D scene behind UI)
-//==============================================================================
-
-// ── Podcast video (background, always playing, muted — audio from SndBuf) ──
-null @=> Video @ podVideo;      // loaded when video file exists
-Gain podVidMute => blackhole;   // mute video audio
+// podcast video plane (background, muted — audio from SndBuf)
+null @=> Video @ podVideo;
+Gain podVidMute => blackhole;
 false => int podVideoLoaded;
 
 GPlane podVideoPlane --> GG.scene();
 FlatMaterial podVidMat;
 podVideoPlane.mat(podVidMat);
-// Position: fills the main content area (right of 280px sidebar, above 90px player bar)
-// Camera at z=8, FOV=45°. Full screen at z=0 ≈ 10.88 x 6.63
-// Content area in 3D coords: x ∈ [-3.06, 5.44], y ∈ [-2.55, 3.31]
-//   center ≈ (1.19, 0.38), usable size ≈ 8.0 x 5.0
-// 16:9 fit by width: w=7.6, h=7.6/1.778 ≈ 4.27
-// Negative scaY flips the video right-side up (UV origin fix)
 podVideoPlane.pos(@(0.8, -0.4, -0.5));
 podVideoPlane.sca(@(6.8, -3.82, 1.0));
-podVideoPlane.sca(@(0, 0, 0));        // hidden until video loads
+podVideoPlane.sca(@(0, 0, 0));  // hidden until loaded
 
-// ── Rap music video (flashes when a clip triggers) ──
+// rap music video plane (flashes on trigger)
 null @=> Video @ rapVideo;
 Gain rapVidMute => blackhole;
 false => int rapVideoLoaded;
-0.0   => float rapVideoLife;     // countdown timer for display
-"" => string rapVideoCurrentSong;  // tracks which song's video is loaded
+0.0   => float rapVideoLife;
+"" => string rapVideoCurrentSong;
 
 GPlane rapVideoPlane --> GG.scene();
 FlatMaterial rapVidMat;
 rapVideoPlane.mat(rapVidMat);
-// PiP in bottom-right of content area (not full screen)
-// Content bottom-right ≈ (5.44, -2.55). PiP: w=2.6, h=1.46 (16:9)
-// z=0.2 so it renders in front of podcast video (z=-0.5)
 rapVideoPlane.pos(@(2.38, -1.55, 0.2));
 rapVideoPlane.sca(@(0, 0, 0));  // hidden until triggered
 
-// ── Song index → rap video file mapping ──
-// Maps 3-digit song index string (e.g. "000") → video path
-string rapVideoMap[0];  // assoc array: key=songIdx, val=video path
+// song index → rap video file mapping
+string rapVideoMap[0];
 
 fun void scanRapVideos()
 {
-    // List of known songs with music videos
+    // known songs with music videos
     string knownSongs[0];
     knownSongs << "000_Kendrick_Lamar_HUMBLE";
     knownSongs << "001_Kendrick_Lamar_DNA";
@@ -395,7 +341,7 @@ fun void scanRapVideos()
 }
 scanRapVideos();
 
-// ── Load initial podcast video ──
+// load initial podcast video
 fun void loadPodcastVideo( int idx )
 {
     if( idx < 0 || idx >= podLib.size() ) return;
@@ -416,16 +362,14 @@ fun void loadPodcastVideo( int idx )
     podVideo.rate(1.0);
     podVidMat.colorMap(podVideo.texture());
     true => podVideoLoaded;
-    podVideoPlane.sca(@(6.8, -3.82, 1.0));  // 16:9, fits content area
-    <<< "[video] Podcast video loaded!" >>>;
+    podVideoPlane.sca(@(6.8, -3.82, 1.0));
 }
 loadPodcastVideo(0);
 
-// ── Trigger rap music video ──
+// trigger rap music video for a clip
 fun void triggerRapVideo( string clipFile )
 {
-    // extract song index from clip filename: "rap_clips/000_..."  → "000"
-    // or "deepfake_clips/df_ara_000_..." → "000"
+    // extract 3-digit song index from filename
     "" => string idxStr;
     if( clipFile.find("rap_clips/") == 0 && clipFile.length() >= 13 )
         clipFile.substring(10, 3) => idxStr;
@@ -436,13 +380,12 @@ fun void triggerRapVideo( string clipFile )
 
     if( idxStr == "" || !rapVideoMap.isInMap(idxStr) )
     {
-        // no video for this song — hide rap video plane
         false => rapVideoLoaded;
         rapVideoPlane.sca(@(0, 0, 0));
         return;
     }
 
-    // Only reload if switching to a different song's video
+    // only reload if switching to a different song
     if( idxStr != rapVideoCurrentSong )
     {
         rapVideoMap[idxStr] => string vPath;
@@ -455,43 +398,39 @@ fun void triggerRapVideo( string clipFile )
     }
 
     true => rapVideoLoaded;
-    rapVideoPlane.sca(@(1.6, -0.9, 1.0));  // PiP size, 16:9 aspect ratio
-    4.0 => rapVideoLife;  // show for 4 seconds
+    rapVideoPlane.sca(@(1.6, -0.9, 1.0));
+    4.0 => rapVideoLife;
 }
 
 
-// shared flag so UI knows when clip is playing
 false => int isPlayingClip;
 
-// feature accumulation buffers
-32 => int MAX_ACC_FRAMES;  // max frames we'll accumulate
+32 => int MAX_ACC_FRAMES;
 float accFeatures[MAX_ACC_FRAMES][NUM_DIMENSIONS];
 float featureMean[NUM_DIMENSIONS];
 
 
-//==============================================================================
-//  SPOTIFY-STYLE ImGui UI  (sporked render loop)
-//==============================================================================
+// Spotify-style ImGui UI loop
 fun void uiLoop()
 {
-    // ── Exact Spotify palette (hex → 0-1) ──
-    @(0.0, 0.0, 0.0, 0.0) => vec4 mainBg;      // transparent — 3D scene shows through
-    @(0.000, 0.000, 0.000, 1.0) => vec4 sidebarBg;    // #000000
-    @(0.094, 0.094, 0.094, 1.0) => vec4 playerBg;     // #181818
-    @(0.110, 0.110, 0.110, 1.0) => vec4 cardBg;       // #1C1C1C
-    @(0.165, 0.165, 0.165, 1.0) => vec4 hoverBg;      // #2A2A2A
-    @(0.200, 0.200, 0.200, 1.0) => vec4 selectedBg;   // #333333
-    @(0.114, 0.725, 0.329, 1.0) => vec4 spGreen;      // #1DB954
-    @(0.118, 0.843, 0.376, 1.0) => vec4 activeGreen;  // #1ED760
-    @(1.0,   1.0,   1.0,   1.0) => vec4 textPrimary;  // #FFFFFF
-    @(0.702, 0.702, 0.702, 1.0) => vec4 textSecondary; // #B3B3B3
-    @(0.325, 0.325, 0.325, 1.0) => vec4 textMuted;    // #535353
-    @(0.302, 0.302, 0.302, 1.0) => vec4 progressTrack; // #4D4D4D
-    @(0.886, 0.129, 0.204, 1.0) => vec4 dangerRed;    // #E22134
+    // Spotify color palette
+    @(0.0, 0.0, 0.0, 0.0) => vec4 mainBg;
+    @(0.000, 0.000, 0.000, 1.0) => vec4 sidebarBg;
+    @(0.094, 0.094, 0.094, 1.0) => vec4 playerBg;
+    @(0.110, 0.110, 0.110, 1.0) => vec4 cardBg;
+    @(0.165, 0.165, 0.165, 1.0) => vec4 hoverBg;
+    @(0.200, 0.200, 0.200, 1.0) => vec4 selectedBg;
+    @(0.114, 0.725, 0.329, 1.0) => vec4 spGreen;
+    @(0.118, 0.843, 0.376, 1.0) => vec4 activeGreen;
+    @(1.0,   1.0,   1.0,   1.0) => vec4 textPrimary;
+    @(0.702, 0.702, 0.702, 1.0) => vec4 textSecondary;
+    @(0.325, 0.325, 0.325, 1.0) => vec4 textMuted;
+    @(0.302, 0.302, 0.302, 1.0) => vec4 progressTrack;
+    @(0.886, 0.129, 0.204, 1.0) => vec4 dangerRed;
 
     280.0 => float SIDEBAR_W;
     90.0  => float PLAYER_H;
-    8.0   => float GAP;    // gap between sidebar cards
+    8.0   => float GAP;
 
     while( true )
     {
@@ -500,7 +439,7 @@ fun void uiLoop()
         progress() => float p;
         currentAct() => int act;
 
-        // ── Sync UI state → engine state ──
+        // sync UI state
         uiClean.val()  => cleanMode;
         uiK.val()      => K;
         if( K < 1 ) 1 => K;
@@ -522,16 +461,12 @@ fun void uiLoop()
             fft.size() => podcast.chunks;
             0 => podcast.pos;
             if( !isPaused ) 1 => podcast.rate;
-            // Load matching video
             loadPodcastVideo(currentPodcastIdx);
         }
 
-        // ── 3D scene bg (dark, behind opaque UI) ──
         GG.scene().backgroundColor(@(0.04, 0.04, 0.05));
 
-        // ── Update video systems ──
-
-        // Rap video fade-out
+        // rap video fade-out
         if( rapVideoLife > 0 )
         {
             dt -=> rapVideoLife;
@@ -542,10 +477,7 @@ fun void uiLoop()
             }
         }
 
-        // ================================================================
-        //  GLOBAL SPOTIFY STYLE OVERRIDES
-        // ================================================================
-        // StyleVars (12)
+        // global style overrides
         UI.pushStyleVar(UI_StyleVar.WindowRounding,    0.0);
         UI.pushStyleVar(UI_StyleVar.WindowBorderSize,  0.0);
         UI.pushStyleVar(UI_StyleVar.WindowPadding,     @(0, 0));
@@ -558,7 +490,7 @@ fun void uiLoop()
         UI.pushStyleVar(UI_StyleVar.ScrollbarSize,     6.0);
         UI.pushStyleVar(UI_StyleVar.GrabRounding,      500.0);
         UI.pushStyleVar(UI_StyleVar.GrabMinSize,       12.0);
-        // StyleColors (22)
+
         UI.pushStyleColor(UI_Color.WindowBg,         mainBg);
         UI.pushStyleColor(UI_Color.ChildBg,          @(0.0, 0.0, 0.0, 0.0));
         UI.pushStyleColor(UI_Color.Border,           @(0.0, 0.0, 0.0, 0.0));
@@ -582,7 +514,7 @@ fun void uiLoop()
         UI.pushStyleColor(UI_Color.PlotHistogram,    spGreen);
         UI.pushStyleColor(UI_Color.PopupBg,          @(0.157, 0.157, 0.157, 1.0));
 
-        // ── Full-viewport root window ──
+        // full-viewport root window
         GWindow.framebufferSize() => vec2 win;
         UI.setNextWindowPos(@(0, 0), 0);
         UI.setNextWindowSize(win, 0);
@@ -595,14 +527,12 @@ fun void uiLoop()
         {
             win.y - PLAYER_H => float contentH;
 
-            // ============================================================
-            //  LEFT SIDEBAR  (black, Spotify's "Your Library" panel)
-            // ============================================================
+            // left sidebar
             UI.pushStyleColor(UI_Color.ChildBg, sidebarBg);
             UI.pushStyleVar(UI_StyleVar.WindowPadding, @(8, 8));
             if( UI.beginChild("##sidebar", @(SIDEBAR_W, contentH), false, 0) )
             {
-                // ── Top nav card (rounded dark card) ──
+                // nav card
                 UI.pushStyleColor(UI_Color.ChildBg, cardBg);
                 UI.pushStyleVar(UI_StyleVar.WindowPadding, @(20, 14));
                 if( UI.beginChild("##nav_card", @(SIDEBAR_W - 16, 56), false, 0) )
@@ -619,12 +549,12 @@ fun void uiLoop()
 
                 UI.dummy(@(0, GAP));
 
-                // ── Library card (main sidebar card) ──
+                // library card
                 UI.pushStyleColor(UI_Color.ChildBg, cardBg);
                 UI.pushStyleVar(UI_StyleVar.WindowPadding, @(12, 12));
                 if( UI.beginChild("##lib_card", @(SIDEBAR_W - 16, contentH - 80), false, 0) )
                 {
-                    // Section header row
+                    // header
                     UI.pushStyleColor(UI_Color.Text, textSecondary);
                     UI.text("Your Library");
                     UI.popStyleColor(1);
@@ -633,24 +563,24 @@ fun void uiLoop()
 
                     UI.dummy(@(0, 8));
 
-                    // ── Podcast list items (like playlist rows) ──
+                    // podcast list
                     for( int i; i < podLib.size(); i++ )
                     {
                         false => int rowClicked;
 
-                        // Brand color per network (thumbnail identity)
+                        // brand color per network
                         vec4 hostColor;
-                        if( podLib[i].host == "WSJ" )       @(0.80, 0.62, 0.25, 1.0) => hostColor;  // gold
-                        else if( podLib[i].host == "TED" )  @(0.90, 0.12, 0.10, 1.0) => hostColor;  // red
-                        else if( podLib[i].host == "CBS" )  @(0.18, 0.35, 0.78, 1.0) => hostColor;  // blue
-                        else if( podLib[i].host == "BBC" )  @(0.75, 0.10, 0.20, 1.0) => hostColor;  // burgundy
-                        else if( podLib[i].host == "CNBC" ) @(0.02, 0.48, 0.76, 1.0) => hostColor;  // teal
-                        else if( podLib[i].host == "VICE" ) @(0.15, 0.15, 0.15, 1.0) => hostColor;  // dark
-                        else if( podLib[i].host == "Vox" )  @(0.93, 0.84, 0.10, 1.0) => hostColor;  // yellow
-                        else if( podLib[i].host == "NBC" )  @(0.35, 0.22, 0.70, 1.0) => hostColor;  // purple
+                        if( podLib[i].host == "WSJ" )       @(0.80, 0.62, 0.25, 1.0) => hostColor;
+                        else if( podLib[i].host == "TED" )  @(0.90, 0.12, 0.10, 1.0) => hostColor;
+                        else if( podLib[i].host == "CBS" )  @(0.18, 0.35, 0.78, 1.0) => hostColor;
+                        else if( podLib[i].host == "BBC" )  @(0.75, 0.10, 0.20, 1.0) => hostColor;
+                        else if( podLib[i].host == "CNBC" ) @(0.02, 0.48, 0.76, 1.0) => hostColor;
+                        else if( podLib[i].host == "VICE" ) @(0.15, 0.15, 0.15, 1.0) => hostColor;
+                        else if( podLib[i].host == "Vox" )  @(0.93, 0.84, 0.10, 1.0) => hostColor;
+                        else if( podLib[i].host == "NBC" )  @(0.35, 0.22, 0.70, 1.0) => hostColor;
                         else                                @(0.30, 0.30, 0.30, 1.0) => hostColor;
 
-                        // Album art square (brand colored, clickable)
+                        // album art
                         if( i == currentPodcastIdx )
                         { if( UI.colorButton("##pa" + i, spGreen, 0, @(44, 44)) ) true => rowClicked; }
                         else
@@ -658,7 +588,7 @@ fun void uiLoop()
 
                         UI.sameLine(0, 12);
 
-                        // Title+subtitle as a single clickable button (transparent bg)
+                        // title + subtitle button
                         if( i == currentPodcastIdx )
                             UI.pushStyleColor(UI_Color.Text, spGreen);
                         else
@@ -690,7 +620,7 @@ fun void uiLoop()
                     UI.separator();
                     UI.dummy(@(0, 8));
 
-                    // ── Sliders section ──
+                    // sliders
                     UI.pushStyleColor(UI_Color.Text, textSecondary);
                     UI.text("Controls");
                     UI.popStyleColor(1);
@@ -698,7 +628,7 @@ fun void uiLoop()
 
                     SIDEBAR_W - 112 => float sliderW;
 
-                    // Volume controls (prominent placement)
+                    // volume
                     UI.setNextItemWidth(sliderW);
                     UI.slider("Pod Vol##sl", uiPodVol, 0.0, 1.0);
                     UI.setNextItemWidth(sliderW);
@@ -735,19 +665,17 @@ fun void uiLoop()
 
             UI.sameLine(0, 0);
 
-            // ============================================================
-            //  MAIN CONTENT AREA  (transparent to show video, right of sidebar)
-            // ============================================================
+            // main content area
             UI.pushStyleColor(UI_Color.ChildBg, @(0.0, 0.0, 0.0, 0.0));
             UI.pushStyleVar(UI_StyleVar.WindowPadding, @(32, 24));
             if( UI.beginChild("##content", @(win.x - SIDEBAR_W, contentH), false, 0) )
             {
-                // ── Top row: title + act badge + clean toggle ──
+                // title + act badge
                 UI.text("Deepfake Diss Track");
 
                 UI.sameLine(0, 20);
 
-                // Act badge (colored pill button)
+                // act badge
                 if( act == 1 )
                 {
                     UI.pushStyleColor(UI_Color.Button, spGreen);
@@ -774,7 +702,7 @@ fun void uiLoop()
 
                 UI.dummy(@(0, 8));
 
-                // ── Escalation progress card ──
+                // escalation progress
                 win.x - SIDEBAR_W - 88 => float cardW;
                 UI.pushStyleColor(UI_Color.ChildBg, cardBg);
                 UI.pushStyleVar(UI_StyleVar.WindowPadding, @(12, 8));
@@ -801,7 +729,7 @@ fun void uiLoop()
 
                 UI.dummy(@(0, 6));
 
-                // ── "Now Dissing" / Last diss card ──
+                // "now dissing" / last diss card
                 UI.pushStyleColor(UI_Color.ChildBg, cardBg);
                 UI.pushStyleVar(UI_StyleVar.WindowPadding, @(12, 8));
                 if( UI.beginChild("##diss_card", @(cardW, 80), false, 0) )
@@ -849,17 +777,14 @@ fun void uiLoop()
             }
             UI.endChild();
             UI.popStyleVar(1);
-            UI.popStyleColor(1);  // main content area transparent bg
+            UI.popStyleColor(1);  // content area
 
-            // ============================================================
-            //  BOTTOM NOW-PLAYING BAR  (#181818, 90px, full width)
-            // ============================================================
+            // bottom now-playing bar
             UI.pushStyleColor(UI_Color.ChildBg, playerBg);
             UI.pushStyleVar(UI_StyleVar.WindowPadding, @(16, 12));
             if( UI.beginChild("##player_bar", @(win.x, PLAYER_H), false, 0) )
             {
-                // ── LEFT third: track info ──
-                // Album art square
+                // track info
                 if( lastWasDeepfake )
                     UI.colorButton("##np_art", dangerRed, 0, @(56, 56));
                 else if( isPlayingClip )
@@ -878,11 +803,11 @@ fun void uiLoop()
 
                 UI.sameLine(0, 40);
 
-                // ── CENTER: transport controls ──
+                // transport controls
                 UI.beginGroup();
                 UI.dummy(@(0, 2));
 
-                // Play/Pause pill button
+                // Play/Pause
                 if( isPaused )
                 {
                     UI.pushStyleColor(UI_Color.Button, spGreen);
@@ -910,7 +835,7 @@ fun void uiLoop()
                     UI.popStyleColor(3);
                 }
 
-                // Progress bar row: time — slider — time
+                // progress bar
                 podcast.samples() => int totalSamps;
                 0.0 => float podProg;
                 if( totalSamps > 0 )
@@ -926,7 +851,7 @@ fun void uiLoop()
 
                 UI.sameLine(0, 8);
 
-                // Thin green progress slider
+                // progress slider
                 UI.pushStyleVar(UI_StyleVar.FrameRounding, 4.0);
                 UI.pushStyleVar(UI_StyleVar.FramePadding, @(0, 1));
                 UI.pushStyleVar(UI_StyleVar.GrabMinSize, 8.0);
@@ -950,7 +875,7 @@ fun void uiLoop()
 
                 UI.sameLine(0, 30);
 
-                // ── RIGHT: volume controls ──
+                // volume
                 UI.beginGroup();
                 UI.dummy(@(0, 2));
 
@@ -981,14 +906,13 @@ fun void uiLoop()
             UI.popStyleVar(1);
             UI.popStyleColor(1);
 
-        } // end root window
+        } // end root
         UI.end();
 
-        // Pop all global styles
         UI.popStyleColor(22);
         UI.popStyleVar(12);
 
-        // ── Keyboard shortcuts ──
+        // keyboard shortcuts
         if( GWindow.keyDown(GWindow.Key_Escape) ) me.exit();
         if( GWindow.keyDown(GWindow.Key_Space) )
         {
@@ -1008,23 +932,19 @@ fun void uiLoop()
 spork ~ uiLoop();
 
 
-//==============================================================================
-//  MAIN LOOP — sequential listen → match → play
-//==============================================================================
+// main loop: listen → match → play
 
 <<< "=== DEEPFAKE DISS TRACK ===" >>>;
-<<< "  Database:", FEATURES_FILE, "(", numPoints, "points )" >>>;
-<<< "  Dimensions:", NUM_DIMENSIONS >>>;
-<<< "  Podcasts available:", podLib.size() >>>;
-<<< "  Deepfake clips:", dfClipsAll.size(), "(all)", dfClipsClean.size(), "(clean)" >>>;
-<<< "========================" >>>;
+<<< "  db:", FEATURES_FILE, "(", numPoints, "points )" >>>;
+<<< "  dims:", NUM_DIMENSIONS >>>;
+<<< "  podcasts:", podLib.size() >>>;
+<<< "  deepfakes:", dfClipsAll.size(), "all /", dfClipsClean.size(), "clean" >>>;
 
 while( true )
 {
-    // ---- PHASE A: Listen to podcast for uiListenTime seconds ----
+    // listen to podcast
     false => isPlayingClip;
 
-    // compute how many FFT hops = listen time
     uiListenTime.val()::second => dur listenDur;
     (listenDur / HOP) $ int => int numFrames;
     if( numFrames < 4 ) 4 => numFrames;
@@ -1039,10 +959,9 @@ while( true )
         HOP => now;
     }
 
-    // skip trigger if paused
     if( isPaused ) continue;
 
-    // compute mean feature vector
+    // mean feature vector
     for( int d; d < NUM_DIMENSIONS; d++ )
     {
         0.0 => featureMean[d];
@@ -1051,13 +970,13 @@ while( true )
         numFrames /=> featureMean[d];
     }
 
-    // ---- PHASE B: KNN search ----
+    // KNN search
     uiK.val() => K;
     if( K < 1 ) 1 => K;
     if( knnResult.size() != K ) knnResult.size(K);
     knn.search( featureMean, K, knnResult );
 
-    // pick from K results (bias toward closest later in performance)
+    // pick from K results (bias closer matches later in performance)
     progress() => float p;
     0 => int pick;
     if( K > 1 )
@@ -1072,31 +991,30 @@ while( true )
     windows[uid] @=> AudioWindow @ win;
     files[win.fileIndex] => string fname;
 
-    // ---- PHASE C: Deepfake swap decision ----
+    // deepfake swap decision
     false => int useDeepfake;
     activeDfClips() @=> string dfClips[];
     if( dfClips.size() > 0 )
     {
         if( p < 0.25 )
-            false => useDeepfake;                          // Act 1: real
+            false => useDeepfake;
         else if( p < 0.7 )
         {
             (p - 0.25) / 0.45 * 0.8 => float dfProb;
-            Math.random2f(0,1) < dfProb => useDeepfake;   // Act 2: blend
+            Math.random2f(0,1) < dfProb => useDeepfake;
         }
         else
-            Math.random2f(0,1) < 0.9 => useDeepfake;      // Act 3: mostly AI
+            Math.random2f(0,1) < 0.9 => useDeepfake;
     }
 
-    // ---- PHASE D: Load and play the FULL clip ----
+    // load and play clip
     true => isPlayingClip;
     triggerCount++;
     if( useDeepfake ) dfTriggerCount++;
 
     if( useDeepfake )
     {
-        // find the deepfake that matches this real clip by base name
-        // real: "rap_clips/032_LilWayne_Lollipop_p023.wav" → base "032_LilWayne_Lollipop_p023"
+        // find matching deepfake by base name
         fname.substring(10, fname.length() - 14) => string realBase;
         -1 => int dfIdx;
         for( int i; i < dfClips.size() && dfIdx < 0; i++ )
@@ -1112,7 +1030,7 @@ while( true )
         }
         else
         {
-            // no matching deepfake → fall back to real clip
+            // no matching deepfake, use real clip
             false => useDeepfake;
             me.dir() + fname => rapBuf.read;
             0 => rapBuf.pos;
@@ -1126,7 +1044,7 @@ while( true )
         fname => lastClipFile;
     }
 
-    // rate modulation based on act
+    // rate modulation by act
     if( p < 0.3 )
         1.0 => rapBuf.rate;
     else if( p < 0.7 )
@@ -1143,7 +1061,7 @@ while( true )
             -1.0 * rapBuf.rate() => rapBuf.rate;
     }
 
-    // update display state — use fileIndex to get correct lyric
+    // update display state
     useDeepfake => lastWasDeepfake;
     if( win.fileIndex < rapLyricsAll.size() )
         rapLyricsAll[win.fileIndex] => lastLyric;
@@ -1151,23 +1069,20 @@ while( true )
         "" => lastLyric;
     (now - performanceStart) / second => lastTriggerTime;
 
-    // trigger music video for this clip
     triggerRapVideo(lastClipFile);
 
-    // duck podcast while clip plays
+    // duck podcast
     podGain.gain() => float savedPodGain;
     savedPodGain * (0.15 + (1.0 - p) * 0.15) => podGain.gain;
 
-    // play the ENTIRE clip with envelope
+    // play clip with envelope
     rapEnv.keyOn();
 
-    // compute clip duration in samples at current rate
     rapBuf.samples() => int clipSamps;
     rapBuf.rate() => float absRate;
     if( absRate < 0 ) -1.0 * absRate => absRate;
     if( absRate < 0.1 ) 0.1 => absRate;
     (clipSamps / (absRate * 44100.0)) => float clipDurSec;
-    // clamp to reasonable range
     if( clipDurSec > 6.0 ) 6.0 => clipDurSec;
     if( clipDurSec < 0.3 ) 0.3 => clipDurSec;
 
@@ -1181,7 +1096,7 @@ while( true )
           <= " samps=" <= clipSamps
           <= IO.newline();
 
-    // wait for clip to finish (minus release time)
+    // wait for clip to finish
     (clipDurSec::second) - rapEnv.releaseTime() => dur playDur;
     if( playDur < 0::samp ) 0::samp => playDur;
     playDur => now;
@@ -1189,13 +1104,12 @@ while( true )
     rapEnv.keyOff();
     rapEnv.releaseTime() => now;
 
-    // restore podcast gain
     savedPodGain => podGain.gain;
 
-    // ---- PHASE E: Cooldown ----
+    // cooldown
     uiCooldown.val()::second => now;
 
-    // ---- Check podcast end ----
+    // loop podcast if ended
     if( podcast.pos() >= podcast.samples() )
     {
         0 => podcast.pos;
@@ -1204,10 +1118,7 @@ while( true )
 }
 
 
-//==============================================================================
-//  UTILITY FUNCTIONS (file loading — unchanged from extract format)
-//==============================================================================
-
+// utility: load feature database file
 fun FileIO loadFile( string filepath )
 {
     0 => numPoints;

@@ -13,10 +13,8 @@ phase-1-classify/data/gtzan/genres_original/
 phase-1-classify/data/gtzan/images_original/
 phase-1-classify/data/gtzan/z-issue/
 
-# Full-length songs & source videos (too large, not your own code)
+# Full-length songs (too large, not your own code)
 phase-3-performance/rap_full_songs/
-phase-3-performance/rap_videos/
-phase-3-performance/podcast_videos/
 
 # Large podcast WAVs (keep one or two if needed for demo)
 phase-3-performance/podcast_60min.wav

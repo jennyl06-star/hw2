@@ -1,0 +1,352 @@
+[
+  {
+    "lyric": "Harder, better, faster, stronger",
+    "start": 205.0,
+    "end": 209.0,
+    "line_index": 1,
+    "confidence": 0.385
+  },
+  {
+    "lyric": "Can only make me stronger",
+    "start": 72.963,
+    "end": 74.815,
+    "line_index": 3,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Man, I been waiting all night now",
+    "start": 20.0,
+    "end": 22.5,
+    "line_index": 8,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "That's how long I been on ya'",
+    "start": 22.5,
+    "end": 25.0,
+    "line_index": 9,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Let's get lost tonight",
+    "start": 25.0,
+    "end": 29.0,
+    "line_index": 16,
+    "confidence": 0.712
+  },
+  {
+    "lyric": "You could be my black Kate Moss tonight",
+    "start": 31.739,
+    "end": 35.217,
+    "line_index": 17,
+    "confidence": 0.712
+  },
+  {
+    "lyric": "Play secretary, I'm the boss tonight",
+    "start": 35.217,
+    "end": 37.826,
+    "line_index": 18,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "And you 'on't give a fuck what they all say, right?",
+    "start": 37.424,
+    "end": 40.758,
+    "line_index": 19,
+    "confidence": 0.695
+  },
+  {
+    "lyric": "Awesome, the Christian in Christian Dior",
+    "start": 0.0,
+    "end": 4.0,
+    "line_index": 20,
+    "confidence": 0.36
+  },
+  {
+    "lyric": "Damn, they 'on't make 'em like this anymore",
+    "start": 43.448,
+    "end": 46.207,
+    "line_index": 21,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Do anybody make real shit anymore?",
+    "start": 43.793,
+    "end": 45.862,
+    "line_index": 23,
+    "confidence": 0.708
+  },
+  {
+    "lyric": "Bow in the presence of greatness",
+    "start": 50.0,
+    "end": 51.875,
+    "line_index": 24,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "You should be honored by my lateness",
+    "start": 54.062,
+    "end": 56.25,
+    "line_index": 26,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "That I would even show up to this fake shit",
+    "start": 56.25,
+    "end": 59.375,
+    "line_index": 27,
+    "confidence": 0.76
+  },
+  {
+    "lyric": "So go ahead, go nuts, go apeshit",
+    "start": 59.706,
+    "end": 61.765,
+    "line_index": 28,
+    "confidence": 0.814
+  },
+  {
+    "lyric": "Act like you can't tell who made this",
+    "start": 63.929,
+    "end": 66.786,
+    "line_index": 30,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "But I know that God put you in front of me",
+    "start": 106.857,
+    "end": 110.0,
+    "line_index": 51,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "So how the hell could you front on me?",
+    "start": 111.892,
+    "end": 114.324,
+    "line_index": 52,
+    "confidence": 0.472
+  },
+  {
+    "lyric": "There's a thousand you's, there's only one of me",
+    "start": 112.143,
+    "end": 114.286,
+    "line_index": 53,
+    "confidence": 0.637
+  },
+  {
+    "lyric": "'Cause it's Louis Vuitton Don night",
+    "start": 117.027,
+    "end": 118.649,
+    "line_index": 55,
+    "confidence": 0.792
+  },
+  {
+    "lyric": "So we gon' do everything that Kan like",
+    "start": 119.0,
+    "end": 121.286,
+    "line_index": 56,
+    "confidence": 0.594
+  },
+  {
+    "lyric": "Since Prince was on Apollonia",
+    "start": 230.0,
+    "end": 231.923,
+    "line_index": 78,
+    "confidence": 0.76
+  },
+  {
+    "lyric": "Since O.J. had Isotoners",
+    "start": 168.4,
+    "end": 170.0,
+    "line_index": 79,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Don't act like I never told ya'",
+    "start": 165.0,
+    "end": 169.0,
+    "line_index": 80,
+    "confidence": 0.984
+  },
+  {
+    "lyric": "Work it, make it, do it, makes us",
+    "start": 90.0,
+    "end": 94.0,
+    "line_index": 0,
+    "confidence": 0.448
+  },
+  {
+    "lyric": "I need you to hurry up now",
+    "start": 135.0,
+    "end": 139.0,
+    "line_index": 4,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "I know I got to be right now",
+    "start": 14.615,
+    "end": 17.692,
+    "line_index": 6,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "'Cause I can't get much wronger",
+    "start": 17.692,
+    "end": 20.0,
+    "line_index": 7,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Work it harder, make it better",
+    "start": 165.0,
+    "end": 169.0,
+    "line_index": 10,
+    "confidence": 0.441
+  },
+  {
+    "lyric": "Do it faster, makes us stronger",
+    "start": 130.0,
+    "end": 134.0,
+    "line_index": 11,
+    "confidence": 0.37
+  },
+  {
+    "lyric": "More than ever",
+    "start": 205.0,
+    "end": 209.0,
+    "line_index": 13,
+    "confidence": 0.378
+  },
+  {
+    "lyric": "Hour after hour work",
+    "start": 165.0,
+    "end": 169.0,
+    "line_index": 14,
+    "confidence": 0.36
+  },
+  {
+    "lyric": "Work it harder, make it better",
+    "start": 165.0,
+    "end": 169.0,
+    "line_index": 41,
+    "confidence": 0.441
+  },
+  {
+    "lyric": "Do it faster, makes us stronger",
+    "start": 130.0,
+    "end": 134.0,
+    "line_index": 42,
+    "confidence": 0.37
+  },
+  {
+    "lyric": "More than ever",
+    "start": 205.0,
+    "end": 209.0,
+    "line_index": 44,
+    "confidence": 0.378
+  },
+  {
+    "lyric": "Hour after hour work",
+    "start": 165.0,
+    "end": 169.0,
+    "line_index": 45,
+    "confidence": 0.36
+  },
+  {
+    "lyric": "I don't know if you got a man or not",
+    "start": 95.0,
+    "end": 99.0,
+    "line_index": 47,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "If you made plans or not",
+    "start": 99.0,
+    "end": 101.4,
+    "line_index": 48,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "If God put me in your plans or not",
+    "start": 101.4,
+    "end": 105.0,
+    "line_index": 49,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "I'm trippin', this drink got me saying a lot",
+    "start": 104.286,
+    "end": 106.857,
+    "line_index": 50,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Heard they'd do anything for a Klondike",
+    "start": 121.286,
+    "end": 123.286,
+    "line_index": 57,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Well, I'd do anything for a blonde dyke",
+    "start": 120.0,
+    "end": 123.81,
+    "line_index": 58,
+    "confidence": 0.712
+  },
+  {
+    "lyric": "And she'll do anything for the limelight",
+    "start": 123.333,
+    "end": 126.667,
+    "line_index": 59,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "And we'll do anything when the time's right",
+    "start": 129.667,
+    "end": 133.667,
+    "line_index": 60,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Work it harder, make it better",
+    "start": 165.0,
+    "end": 169.0,
+    "line_index": 71,
+    "confidence": 0.441
+  },
+  {
+    "lyric": "Do it faster, makes us stronger",
+    "start": 130.0,
+    "end": 134.0,
+    "line_index": 72,
+    "confidence": 0.37
+  },
+  {
+    "lyric": "More than ever",
+    "start": 205.0,
+    "end": 209.0,
+    "line_index": 74,
+    "confidence": 0.378
+  },
+  {
+    "lyric": "Hour after hour work is never over",
+    "start": 165.0,
+    "end": 169.0,
+    "line_index": 75,
+    "confidence": 0.469
+  },
+  {
+    "lyric": "Work it harder, make it better",
+    "start": 165.0,
+    "end": 169.0,
+    "line_index": 97,
+    "confidence": 0.441
+  },
+  {
+    "lyric": "Do it faster, makes us stronger",
+    "start": 130.0,
+    "end": 134.0,
+    "line_index": 98,
+    "confidence": 0.37
+  }
+]

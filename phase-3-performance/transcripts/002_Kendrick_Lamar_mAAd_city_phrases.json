@@ -1,0 +1,23 @@
+[
+  {
+    "lyric": "If Pirus and Crips all got along",
+    "start": 0.357,
+    "end": 2.857,
+    "line_index": 0,
+    "confidence": 0.679
+  },
+  {
+    "lyric": "They'd probably gun me down by the end of this song",
+    "start": 2.857,
+    "end": 6.786,
+    "line_index": 1,
+    "confidence": 0.864
+  },
+  {
+    "lyric": "Seem like the whole city go against me",
+    "start": 6.786,
+    "end": 9.643,
+    "line_index": 2,
+    "confidence": 0.831
+  }
+]

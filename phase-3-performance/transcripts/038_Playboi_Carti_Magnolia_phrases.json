@@ -1,0 +1,191 @@
+[
+  {
+    "lyric": "Yo, Pi'erre, you wanna come out here?",
+    "start": 35.0,
+    "end": 39.0,
+    "line_index": 0,
+    "confidence": 0.543
+  },
+  {
+    "lyric": "In New York I Milly Rock (rock)",
+    "start": 5.0,
+    "end": 9.0,
+    "line_index": 1,
+    "confidence": 0.708
+  },
+  {
+    "lyric": "Hide it in my sock (sock)",
+    "start": 15.769,
+    "end": 18.077,
+    "line_index": 2,
+    "confidence": 0.85
+  },
+  {
+    "lyric": "Running from the opp (opp)",
+    "start": 14.615,
+    "end": 16.538,
+    "line_index": 3,
+    "confidence": 0.637
+  },
+  {
+    "lyric": "Used to sell rerock (what?)",
+    "start": 150.0,
+    "end": 154.0,
+    "line_index": 13,
+    "confidence": 0.385
+  },
+  {
+    "lyric": "Runnin' from the cops (woah)",
+    "start": 36.364,
+    "end": 38.636,
+    "line_index": 14,
+    "confidence": 0.76
+  },
+  {
+    "lyric": "Shootin' at these opps (woah)",
+    "start": 38.125,
+    "end": 41.25,
+    "line_index": 15,
+    "confidence": 0.424
+  },
+  {
+    "lyric": "All these hoes gon' flock (flock, flock)",
+    "start": 60.0,
+    "end": 62.692,
+    "line_index": 20,
+    "confidence": 0.51
+  },
+  {
+    "lyric": "All these hoes want cash (cash)",
+    "start": 60.0,
+    "end": 62.308,
+    "line_index": 28,
+    "confidence": 0.68
+  },
+  {
+    "lyric": "All these niggas sound like cats, sound like cats (blah)",
+    "start": 66.304,
+    "end": 70.304,
+    "line_index": 32,
+    "confidence": 0.855
+  },
+  {
+    "lyric": "I'm a soldier, ooh (what?)",
+    "start": 175.0,
+    "end": 179.0,
+    "line_index": 33,
+    "confidence": 0.351
+  },
+  {
+    "lyric": "Damn, I thought I told you, ooh (what?)",
+    "start": 71.087,
+    "end": 74.565,
+    "line_index": 34,
+    "confidence": 0.475
+  },
+  {
+    "lyric": "Shootin' like a soldier, ooh (bih)",
+    "start": 38.125,
+    "end": 41.875,
+    "line_index": 35,
+    "confidence": 0.369
+  },
+  {
+    "lyric": "Like I'm from Magnolia, ooh (what?)",
+    "start": 74.118,
+    "end": 77.647,
+    "line_index": 36,
+    "confidence": 0.475
+  },
+  {
+    "lyric": "Big bank (what? What?) never fold (What?)",
+    "start": 175.0,
+    "end": 179.0,
+    "line_index": 38,
+    "confidence": 0.406
+  },
+  {
+    "lyric": "I'm sippin' Act' (what?) fill that shit slowly (hello?)",
+    "start": 55.0,
+    "end": 59.0,
+    "line_index": 39,
+    "confidence": 0.4
+  },
+  {
+    "lyric": "I'm in London (what?) Yung Carti global (what?)",
+    "start": 70.0,
+    "end": 74.0,
+    "line_index": 41,
+    "confidence": 0.383
+  },
+  {
+    "lyric": "Designer is on me (phew) call it dirty laundry (phew)",
+    "start": 55.0,
+    "end": 59.0,
+    "line_index": 42,
+    "confidence": 0.424
+  },
+  {
+    "lyric": "All these bitches want Yung Carti (what?) Yung Carti (yeah)",
+    "start": 175.0,
+    "end": 179.0,
+    "line_index": 43,
+    "confidence": 0.382
+  },
+  {
+    "lyric": "All of your bitches, they loose, hold on",
+    "start": 150.0,
+    "end": 154.0,
+    "line_index": 46,
+    "confidence": 0.394
+  },
+  {
+    "lyric": "All of my bitches, they rich, hold on",
+    "start": 165.0,
+    "end": 169.0,
+    "line_index": 48,
+    "confidence": 0.386
+  },
+  {
+    "lyric": "And they stay rockin' that Rick, hold on",
+    "start": 5.833,
+    "end": 9.833,
+    "line_index": 49,
+    "confidence": 0.427
+  },
+  {
+    "lyric": "Cash Carti, bitch (bitch)",
+    "start": 61.538,
+    "end": 63.077,
+    "line_index": 53,
+    "confidence": 0.567
+  },
+  {
+    "lyric": "Got a rich clique (hold on)",
+    "start": 115.294,
+    "end": 118.824,
+    "line_index": 55,
+    "confidence": 0.792
+  },
+  {
+    "lyric": "I'm suckin' on the clit (hold on)",
+    "start": 150.0,
+    "end": 154.0,
+    "line_index": 56,
+    "confidence": 0.508
+  },
+  {
+    "lyric": "She suckin' on the dick (yeah)",
+    "start": 117.069,
+    "end": 119.138,
+    "line_index": 57,
+    "confidence": 0.792
+  },
+  {
+    "lyric": "Give that hoe a tip (yeah)",
+    "start": 119.138,
+    "end": 121.207,
+    "line_index": 58,
+    "confidence": 0.425
+  }
+]

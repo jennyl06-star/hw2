@@ -1,0 +1,352 @@
+[
+  {
+    "lyric": "I say he so sweet",
+    "start": 10.0,
+    "end": 14.0,
+    "line_index": 1,
+    "confidence": 0.944
+  },
+  {
+    "lyric": "Make her wanna lick the wrapper",
+    "start": 255.0,
+    "end": 259.0,
+    "line_index": 2,
+    "confidence": 0.5
+  },
+  {
+    "lyric": "So I let her lick the wrapper",
+    "start": 250.0,
+    "end": 254.0,
+    "line_index": 3,
+    "confidence": 0.48
+  },
+  {
+    "lyric": "Shawty want a thug (yeah, yeah, yeah)",
+    "start": 110.0,
+    "end": 114.0,
+    "line_index": 8,
+    "confidence": 0.507
+  },
+  {
+    "lyric": "You know I like to touch (yeah)",
+    "start": 35.0,
+    "end": 39.0,
+    "line_index": 11,
+    "confidence": 0.607
+  },
+  {
+    "lyric": "Shawty wanna thug, thug, thug (I like that)",
+    "start": 36.818,
+    "end": 40.818,
+    "line_index": 13,
+    "confidence": 0.567
+  },
+  {
+    "lyric": "Bottles in the club, club, club (I like that, hahaha)",
+    "start": 230.0,
+    "end": 234.0,
+    "line_index": 14,
+    "confidence": 0.531
+  },
+  {
+    "lyric": "You know I like to touch",
+    "start": 39.545,
+    "end": 43.545,
+    "line_index": 16,
+    "confidence": 0.792
+  },
+  {
+    "lyric": "Okay, lil' mama had a swag like mine (yeah)",
+    "start": 68.793,
+    "end": 71.897,
+    "line_index": 18,
+    "confidence": 0.422
+  },
+  {
+    "lyric": "She even wear her hair down her back like mine (yeah)",
+    "start": 61.154,
+    "end": 65.154,
+    "line_index": 19,
+    "confidence": 0.595
+  },
+  {
+    "lyric": "I make her feel right when it's wrong, like lying (yeah)",
+    "start": 65.0,
+    "end": 69.0,
+    "line_index": 20,
+    "confidence": 0.777
+  },
+  {
+    "lyric": "Man, she ain't never had a love like mine (yeah)",
+    "start": 68.448,
+    "end": 71.897,
+    "line_index": 21,
+    "confidence": 0.765
+  },
+  {
+    "lyric": "But man, I ain't never seen a ass like hers (go!)",
+    "start": 68.103,
+    "end": 71.897,
+    "line_index": 22,
+    "confidence": 0.541
+  },
+  {
+    "lyric": "That pussy in my mouth, had me lost for words (go!)",
+    "start": 165.0,
+    "end": 169.0,
+    "line_index": 23,
+    "confidence": 0.373
+  },
+  {
+    "lyric": "So I told her back it up like, burp, burp\" (yeah)",
+    "start": 77.222,
+    "end": 81.222,
+    "line_index": 24,
+    "confidence": 0.533
+  },
+  {
+    "lyric": "And I made that ass jump like, jermp, jermp (yeah!)",
+    "start": 75.0,
+    "end": 79.0,
+    "line_index": 25,
+    "confidence": 0.661
+  },
+  {
+    "lyric": "Shawty wanna hump",
+    "start": 37.727,
+    "end": 40.455,
+    "line_index": 33,
+    "confidence": 0.633
+  },
+  {
+    "lyric": "You know I like to touch (yeah)",
+    "start": 35.0,
+    "end": 39.0,
+    "line_index": 34,
+    "confidence": 0.607
+  },
+  {
+    "lyric": "Your lovely lady lumps (yeah, shawty wanna)",
+    "start": 105.0,
+    "end": 109.0,
+    "line_index": 35,
+    "confidence": 0.469
+  },
+  {
+    "lyric": "Okay (yeah), after you back it up, don't stop (drop it!)",
+    "start": 260.0,
+    "end": 264.0,
+    "line_index": 41,
+    "confidence": 0.39
+  },
+  {
+    "lyric": "Drop it, shawty (yeah) drop it like it's hot",
+    "start": 165.0,
+    "end": 169.0,
+    "line_index": 42,
+    "confidence": 0.638
+  },
+  {
+    "lyric": "Shawty say the nigga that she with ain't shit (yeah)",
+    "start": 110.0,
+    "end": 114.0,
+    "line_index": 45,
+    "confidence": 0.477
+  },
+  {
+    "lyric": "Shawty say the nigga that she with ain't this (yeah)",
+    "start": 110.0,
+    "end": 114.0,
+    "line_index": 46,
+    "confidence": 0.477
+  },
+  {
+    "lyric": "Shawty say the nigga that she with can't hit (yeah)",
+    "start": 110.0,
+    "end": 114.0,
+    "line_index": 47,
+    "confidence": 0.483
+  },
+  {
+    "lyric": "But shawty, I'ma hit it, hit it, like I can't miss",
+    "start": 231.333,
+    "end": 235.333,
+    "line_index": 48,
+    "confidence": 0.496
+  },
+  {
+    "lyric": "Shawty need a refund (yeah), need to bring that nigga back",
+    "start": 110.0,
+    "end": 114.0,
+    "line_index": 50,
+    "confidence": 0.409
+  },
+  {
+    "lyric": "Just like a refund, I make her bring that ass back",
+    "start": 165.0,
+    "end": 169.0,
+    "line_index": 51,
+    "confidence": 0.494
+  },
+  {
+    "lyric": "And she bring that ass back, because I like that",
+    "start": 76.667,
+    "end": 80.667,
+    "line_index": 52,
+    "confidence": 0.567
+  },
+  {
+    "lyric": "Shawty wanna lick, lick, lick, lick, lick me like a lollipop",
+    "start": 35.0,
+    "end": 39.0,
+    "line_index": 58,
+    "confidence": 0.446
+  },
+  {
+    "lyric": "I said, shawty wanna lick, lick, lick, lick, lick me like a lollipop",
+    "start": 35.0,
+    "end": 39.0,
+    "line_index": 59,
+    "confidence": 0.471
+  },
+  {
+    "lyric": "Shawty wanna lick me, like a lollipop",
+    "start": 37.727,
+    "end": 41.727,
+    "line_index": 60,
+    "confidence": 0.522
+  },
+  {
+    "lyric": "Call me, so I can make it juicy for you",
+    "start": 273.793,
+    "end": 277.241,
+    "line_index": 68,
+    "confidence": 0.68
+  },
+  {
+    "lyric": "I get her on top (yeah), she drop it like it's hot (yeah)",
+    "start": 165.0,
+    "end": 169.0,
+    "line_index": 86,
+    "confidence": 0.525
+  },
+  {
+    "lyric": "And when I'm at the bottom, she Hillary Rodham",
+    "start": 110.0,
+    "end": 114.0,
+    "line_index": 87,
+    "confidence": 0.386
+  },
+  {
+    "lyric": "The middle of the bed (yeah), giving, gettin' head (yuh)",
+    "start": 160.0,
+    "end": 164.0,
+    "line_index": 88,
+    "confidence": 0.42
+  },
+  {
+    "lyric": "Say, call me, so I can come and do it for you",
+    "start": 273.448,
+    "end": 277.448,
+    "line_index": 94,
+    "confidence": 0.637
+  },
+  {
+    "lyric": "Call me, so I can come and prove it for you",
+    "start": 270.0,
+    "end": 273.793,
+    "line_index": 95,
+    "confidence": 0.864
+  },
+  {
+    "lyric": "Call me, so I can make it juicy for you",
+    "start": 273.793,
+    "end": 277.241,
+    "line_index": 96,
+    "confidence": 0.68
+  },
+  {
+    "lyric": "Call me, so I can get it juicy for you",
+    "start": 273.793,
+    "end": 277.241,
+    "line_index": 97,
+    "confidence": 0.68
+  },
+  {
+    "lyric": "I said he's so sweet, make her wanna lick the wrapper (she-she-she lick me like a lollipop)",
+    "start": 35.0,
+    "end": 39.0,
+    "line_index": 100,
+    "confidence": 0.423
+  },
+  {
+    "lyric": "(What you do?) So I let her lick the rapper (she-she lick me like a lollipop)",
+    "start": 75.0,
+    "end": 79.0,
+    "line_index": 101,
+    "confidence": 0.395
+  },
+  {
+    "lyric": "She-she-she licked me like a lollipop (yeah)",
+    "start": 250.0,
+    "end": 254.0,
+    "line_index": 4,
+    "confidence": 0.393
+  },
+  {
+    "lyric": "Sh-Sh-She licked me like a lollipop (yeah)",
+    "start": 250.0,
+    "end": 254.0,
+    "line_index": 6,
+    "confidence": 0.407
+  },
+  {
+    "lyric": "She-she licked me like a lollipop, lollipop",
+    "start": 250.0,
+    "end": 254.0,
+    "line_index": 7,
+    "confidence": 0.387
+  },
+  {
+    "lyric": "And that's when she",
+    "start": 10.0,
+    "end": 14.0,
+    "line_index": 26,
+    "confidence": 0.474
+  },
+  {
+    "lyric": "She-she licked me like a lollipop, l-lollipop (yeah)",
+    "start": 250.0,
+    "end": 254.0,
+    "line_index": 28,
+    "confidence": 0.353
+  },
+  {
+    "lyric": "Sh-sh-she licked me like a lollipop (yeah)",
+    "start": 250.0,
+    "end": 254.0,
+    "line_index": 29,
+    "confidence": 0.407
+  },
+  {
+    "lyric": "She-she licked me like a lollipop, lollipop",
+    "start": 250.0,
+    "end": 254.0,
+    "line_index": 30,
+    "confidence": 0.387
+  },
+  {
+    "lyric": "Shawty want a thug (shawty want a thug, yeah!)",
+    "start": 110.0,
+    "end": 114.0,
+    "line_index": 31,
+    "confidence": 0.65
+  },
+  {
+    "lyric": "Bottles in the club (bottles in the club)",
+    "start": 230.0,
+    "end": 234.0,
+    "line_index": 32,
+    "confidence": 0.85
+  }
+]

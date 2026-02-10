@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Programming Project #2</title>
+
+    <style>
+      /* Simple, clean defaults */
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 40px;
+        font-family:
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+        color: #111;
+        background: #fff;
+        line-height: 1.5;
+        font-size: 16px;
+      }
+
+      .wrap {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin: 0 0 6px;
+        font-size: 28px;
+      }
+
+      h2 {
+        margin: 22px 0 10px;
+        font-size: 20px;
+      }
+
+      .byline {
+        margin: 0 0 18px;
+        color: #444;
+      }
+
+      .byline a {
+        color: #111;
+        text-decoration: underline;
+      }
+
+      .section {
+        margin: 18px 0 28px;
+      }
+
+      .note {
+        color: #444;
+        margin: 8px 0 0;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0 18px;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        vertical-align: top;
+      }
+
+      th {
+        text-align: left;
+        background: transparent; /* no background color */
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+
+      code {
+        font-family:
+          ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+        font-size: 0.95em;
+      }
+
+      .block {
+        border: 1px solid #ddd;
+        padding: 12px;
+        margin: 10px 0 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <h1>Programming Project #2</h1>
+
+      <p class="byline">
+        <b>Jenny Li</b> •
+        <a href="mailto:jennyl06@ccrma.stanford.edu"
+          >jennyl06@ccrma.stanford.edu</a
+        >
+      </p>
+
+      <!-- PHASE ONE -->
+      <div class="section">
+        <h2>Phase One</h2>
+
+        <div class="block">
+          <b>Summary</b><br />
+          According to my data, the highest combination of feature use are the
+          2, 4, and 5 run, all with a mean of around 0.40.
+          <br /><br />
+          Energy + noisiness alone does not separate genres. MFCCs help overall,
+          but only when combined carefully. Surprisingly, brightness features
+          are very powerful in separating genres. I also tried to add all
+          features into the last run, expecting it to have a high accuracy.
+          However, it turns out to be the lowest.
+        </div>
+
+        <p class="note">
+          I tested 6 feature combinations using 5-fold cross validation.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Run</th>
+              <th>Features</th>
+              <th>Question / Hypothesis</th>
+              <th>Mean</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>#1</b></td>
+              <td>RMS + ZeroX</td>
+              <td>Can energy + noisiness alone separate genres?</td>
+              <td><code>0.1000</code></td>
+            </tr>
+            <tr>
+              <td><b>#2</b></td>
+              <td>Centroid + RollOff</td>
+              <td>Is brightness better captured by “center” or “edge”?</td>
+              <td><code>0.3988</code></td>
+            </tr>
+            <tr>
+              <td><b>#3</b></td>
+              <td>MFCC + Chroma + RMS</td>
+              <td>Does combining timbre + harmony + loudness help?</td>
+              <td><code>0.3968</code></td>
+            </tr>
+            <tr>
+              <td><b>#4</b></td>
+              <td>Centroid + RMS + Flux</td>
+              <td>Loudness + brightness + motion/change</td>
+              <td><code>0.2962</code></td>
+            </tr>
+            <tr>
+              <td><b>#5</b></td>
+              <td>Centroid + RMS + Flux + MFCC</td>
+              <td>Timbre + loudness + brightness + motion/change</td>
+              <td><code>0.4032</code></td>
+            </tr>
+            <tr>
+              <td><b>#6</b></td>
+              <td>Centroid + RMS + Flux + MFCC + Chroma + RollOff + ZeroX</td>
+              <td>Will adding more features increase accuracy?</td>
+              <td><code>0.1040</code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="note">
+          <b>Key observation:</b> best mean accuracies are <b>#5</b> (~0.403),
+          <b>#2</b> (~0.399), and <b>#3</b> (~0.397). The “all features” run
+          <b>#6</b> dropped (~0.104).
+        </p>
+      </div>
+
+      <!-- PHASE TWO -->
+      <div class="section">
+        <h2>Phase 2</h2>
+
+        <p>
+          I collected 18 short meme sound clips and built a real-time system
+          that matches incoming audio to the closest clip using nearest
+          neighbors. To keep comparisons consistent, I fixed each analysis
+          window at 500 milliseconds. I found that running a podcast through my
+          feature extractor worked especially well, since natural speech has clear
+          pitch and tones, and different words or syllables often produce distinct feature patterns that “trigger”
+          different memes. In this setup, I used centroid, flux, RMS, and
+          MFCCs—capturing brightness, motion/change, loudness, and timbre—so the
+          podcast input provided exactly the kind of varied, information-rich
+          audio these unit analyzers respond to.
+        </p>
+
+        <div style="max-width: 720px">
+          <iframe
+            width="720"
+            height="405"
+            src="https://www.youtube-nocookie.com/embed/9X35RHz8S6Y"
+            title="Phase 2 demo video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

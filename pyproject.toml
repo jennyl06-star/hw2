@@ -1,0 +1,20 @@
+[project]
+name = "hw2"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "librosa>=0.11.0",
+    "lyricsgenius>=3.7.5",
+    "numpy>=2.3.5",
+    "openai>=2.17.0",
+    "openai-whisper>=20250625",
+    "pydub>=0.25.1",
+    "python-dotenv>=1.2.1",
+    "pytube>=15.0.0",
+    "requests>=2.32.5",
+    "soundfile>=0.13.1",
+    "websockets>=16.0",
+    "yt-dlp>=2026.2",
+]

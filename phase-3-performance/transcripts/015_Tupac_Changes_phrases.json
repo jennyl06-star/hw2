@@ -1,0 +1,352 @@
+[
+  {
+    "lyric": "I see no changes wake up in the morning and I ask myself",
+    "start": 12.353,
+    "end": 16.353,
+    "line_index": 1,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Is life worth living should I blast myself?",
+    "start": 19.474,
+    "end": 21.579,
+    "line_index": 2,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "I'm tired of bein' poor and even worse I'm black",
+    "start": 21.579,
+    "end": 24.211,
+    "line_index": 3,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Cops give a damn about a negro",
+    "start": 202.25,
+    "end": 204.0,
+    "line_index": 5,
+    "confidence": 0.425
+  },
+  {
+    "lyric": "Pull the trigger kill a nigga he's a hero",
+    "start": 25.0,
+    "end": 28.913,
+    "line_index": 6,
+    "confidence": 0.744
+  },
+  {
+    "lyric": "Give the crack to the kids who the hell cares",
+    "start": 30.0,
+    "end": 32.632,
+    "line_index": 7,
+    "confidence": 0.57
+  },
+  {
+    "lyric": "One less hungry mouth on the welfare",
+    "start": 31.957,
+    "end": 35.0,
+    "line_index": 8,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "First ship 'em dope and let 'em deal the brothers",
+    "start": 34.211,
+    "end": 36.842,
+    "line_index": 9,
+    "confidence": 0.567
+  },
+  {
+    "lyric": "Give 'em guns step back watch 'em kill each other",
+    "start": 36.842,
+    "end": 39.474,
+    "line_index": 10,
+    "confidence": 0.665
+  },
+  {
+    "lyric": "\"It's time to fight back,\" that's what Huey said",
+    "start": 35.0,
+    "end": 38.913,
+    "line_index": 11,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Two shots in the dark now Huey's dead",
+    "start": 38.913,
+    "end": 42.391,
+    "line_index": 12,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "I got love for my brother but we can never go nowhere",
+    "start": 43.947,
+    "end": 47.105,
+    "line_index": 13,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Unless we share with each other",
+    "start": 47.105,
+    "end": 48.684,
+    "line_index": 14,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "We gotta start makin' changes",
+    "start": 48.684,
+    "end": 50.0,
+    "line_index": 15,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Learn to see me as a brother instead of two distant strangers",
+    "start": 49.048,
+    "end": 51.905,
+    "line_index": 16,
+    "confidence": 0.633
+  },
+  {
+    "lyric": "How can the Devil take a brother if he's close to me?",
+    "start": 146.429,
+    "end": 150.429,
+    "line_index": 18,
+    "confidence": 0.435
+  },
+  {
+    "lyric": "I'd love to go back to when we played as kids",
+    "start": 50.0,
+    "end": 54.0,
+    "line_index": 19,
+    "confidence": 0.732
+  },
+  {
+    "lyric": "But things changed, and that's the way it is",
+    "start": 67.5,
+    "end": 71.5,
+    "line_index": 20,
+    "confidence": 0.633
+  },
+  {
+    "lyric": "I see no changes all I see is racist faces",
+    "start": 95.857,
+    "end": 98.714,
+    "line_index": 29,
+    "confidence": 0.85
+  },
+  {
+    "lyric": "Misplaced hate makes disgrace to races",
+    "start": 97.286,
+    "end": 99.0,
+    "line_index": 30,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "We under I wonder what it takes to make this",
+    "start": 99.0,
+    "end": 101.857,
+    "line_index": 31,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "One better place, let's erase the wasted",
+    "start": 101.857,
+    "end": 103.857,
+    "line_index": 32,
+    "confidence": 0.543
+  },
+  {
+    "lyric": "Take the evil out the people they'll be acting right",
+    "start": 102.571,
+    "end": 105.429,
+    "line_index": 33,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "'Cause both black and white is smokin' crack tonight",
+    "start": 105.429,
+    "end": 108.0,
+    "line_index": 34,
+    "confidence": 0.567
+  },
+  {
+    "lyric": "And only time we chill is when we kill each other",
+    "start": 108.333,
+    "end": 110.778,
+    "line_index": 35,
+    "confidence": 0.864
+  },
+  {
+    "lyric": "It takes skill to be real, time to heal each other",
+    "start": 110.778,
+    "end": 113.222,
+    "line_index": 36,
+    "confidence": 0.765
+  },
+  {
+    "lyric": "It ain't a secret don't conceal the fact",
+    "start": 115.385,
+    "end": 118.462,
+    "line_index": 39,
+    "confidence": 0.594
+  },
+  {
+    "lyric": "The penitentiary's packed, and it's filled with blacks",
+    "start": 30.0,
+    "end": 32.105,
+    "line_index": 40,
+    "confidence": 0.425
+  },
+  {
+    "lyric": "But some things will never change",
+    "start": 120.833,
+    "end": 122.5,
+    "line_index": 41,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Try to show another way but you stayin' in the dope game",
+    "start": 122.821,
+    "end": 125.897,
+    "line_index": 42,
+    "confidence": 0.779
+  },
+  {
+    "lyric": "Now tell me what's a mother to do",
+    "start": 125.897,
+    "end": 127.949,
+    "line_index": 43,
+    "confidence": 0.831
+  },
+  {
+    "lyric": "Bein' real don't appeal to the brother in you",
+    "start": 127.692,
+    "end": 130.0,
+    "line_index": 44,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "You gotta operate the easy way",
+    "start": 130.0,
+    "end": 131.5,
+    "line_index": 45,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "We gotta make a change",
+    "start": 171.667,
+    "end": 175.667,
+    "line_index": 57,
+    "confidence": 0.816
+  },
+  {
+    "lyric": "It's time for us as a people to start makin' some changes",
+    "start": 170.0,
+    "end": 174.0,
+    "line_index": 58,
+    "confidence": 0.452
+  },
+  {
+    "lyric": "Let's change the way we eat, let's change the way we live",
+    "start": 150.0,
+    "end": 154.0,
+    "line_index": 59,
+    "confidence": 0.557
+  },
+  {
+    "lyric": "And let's change the way we treat each other",
+    "start": 165.0,
+    "end": 169.0,
+    "line_index": 60,
+    "confidence": 0.506
+  },
+  {
+    "lyric": "And still I see no changes can't a brother get a little peace?",
+    "start": 195.116,
+    "end": 198.14,
+    "line_index": 63,
+    "confidence": 0.708
+  },
+  {
+    "lyric": "It's war on the streets and the war in the Middle East",
+    "start": 192.326,
+    "end": 195.116,
+    "line_index": 64,
+    "confidence": 0.85
+  },
+  {
+    "lyric": "Instead of war on poverty they got a war on drugs",
+    "start": 192.093,
+    "end": 194.651,
+    "line_index": 65,
+    "confidence": 0.472
+  },
+  {
+    "lyric": "So the police can bother me",
+    "start": 197.674,
+    "end": 199.07,
+    "line_index": 66,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "And I ain't never did a crime I ain't have to do",
+    "start": 198.0,
+    "end": 201.0,
+    "line_index": 67,
+    "confidence": 0.871
+  },
+  {
+    "lyric": "But now I'm back with the blacks givin' it back to you",
+    "start": 120.256,
+    "end": 123.333,
+    "line_index": 68,
+    "confidence": 0.541
+  },
+  {
+    "lyric": "You gotta learn to hold ya own",
+    "start": 205.0,
+    "end": 207.258,
+    "line_index": 71,
+    "confidence": 0.814
+  },
+  {
+    "lyric": "I don't trust this when they try to rush I bust this",
+    "start": 213.81,
+    "end": 216.667,
+    "line_index": 74,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "My mama didn't raise no fool",
+    "start": 218.947,
+    "end": 220.526,
+    "line_index": 76,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "And as long as I stay black I gotta stay strapped",
+    "start": 220.526,
+    "end": 223.421,
+    "line_index": 77,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "'Cause I always got to worry 'bout the pay backs",
+    "start": 225.385,
+    "end": 227.949,
+    "line_index": 79,
+    "confidence": 0.76
+  },
+  {
+    "lyric": "Rat-a-tat-tat-tat-tat that's the way it is, uh",
+    "start": 137.714,
+    "end": 139.714,
+    "line_index": 82,
+    "confidence": 0.679
+  },
+  {
+    "lyric": "Some things will never change",
+    "start": 121.111,
+    "end": 122.5,
+    "line_index": 91,
+    "confidence": 0.95
+  }
+]

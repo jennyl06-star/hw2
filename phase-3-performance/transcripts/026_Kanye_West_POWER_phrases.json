@@ -1,0 +1,310 @@
+[
+  {
+    "lyric": "I'm living in that 21st Century, doing something mean to it",
+    "start": 10.0,
+    "end": 14.0,
+    "line_index": 0,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Do it better than anybody you ever seen do it",
+    "start": 14.545,
+    "end": 18.545,
+    "line_index": 1,
+    "confidence": 0.744
+  },
+  {
+    "lyric": "Screams from the haters, got a nice ring to it",
+    "start": 18.929,
+    "end": 22.5,
+    "line_index": 2,
+    "confidence": 0.76
+  },
+  {
+    "lyric": "I guess every superhero need his theme music",
+    "start": 16.071,
+    "end": 18.929,
+    "line_index": 3,
+    "confidence": 0.744
+  },
+  {
+    "lyric": "No one man should have all that power",
+    "start": 62.8,
+    "end": 66.0,
+    "line_index": 4,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "The clock's ticking, I just count the hours",
+    "start": 28.478,
+    "end": 31.957,
+    "line_index": 5,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Stop tripping, I'm tripping off the power",
+    "start": 31.957,
+    "end": 35.0,
+    "line_index": 6,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "The system broken, the school is closed, the prison's open",
+    "start": 35.0,
+    "end": 39.0,
+    "line_index": 8,
+    "confidence": 0.688
+  },
+  {
+    "lyric": "We ain't got nothing to lose, motherfucker we rolling",
+    "start": 40.833,
+    "end": 44.583,
+    "line_index": 9,
+    "confidence": 0.844
+  },
+  {
+    "lyric": "With some light-skinned girls and some Kelly Rowlands",
+    "start": 46.2,
+    "end": 49.4,
+    "line_index": 11,
+    "confidence": 0.712
+  },
+  {
+    "lyric": "In this white man world, we the ones chosen",
+    "start": 49.4,
+    "end": 53.0,
+    "line_index": 12,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "So goodnight, cruel world, I'll see you in the morning",
+    "start": 53.846,
+    "end": 57.692,
+    "line_index": 13,
+    "confidence": 0.595
+  },
+  {
+    "lyric": "This is way too much, I need a moment",
+    "start": 59.286,
+    "end": 62.5,
+    "line_index": 15,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Till then, fuck that, the world's ours",
+    "start": 73.0,
+    "end": 77.0,
+    "line_index": 19,
+    "confidence": 0.595
+  },
+  {
+    "lyric": "Fuck SNL and the whole cast",
+    "start": 5.0,
+    "end": 9.0,
+    "line_index": 24,
+    "confidence": 0.356
+  },
+  {
+    "lyric": "Tell them Yeezy said they can kiss my whole ass",
+    "start": 70.0,
+    "end": 74.0,
+    "line_index": 25,
+    "confidence": 0.379
+  },
+  {
+    "lyric": "More specifically they can kiss my asshole",
+    "start": 70.0,
+    "end": 74.0,
+    "line_index": 26,
+    "confidence": 0.311
+  },
+  {
+    "lyric": "I'm an asshole? You niggas got jokes",
+    "start": 5.0,
+    "end": 9.0,
+    "line_index": 27,
+    "confidence": 0.346
+  },
+  {
+    "lyric": "You short-minded niggas thoughts is Napoleon",
+    "start": 24.764,
+    "end": 27.434,
+    "line_index": 28,
+    "confidence": 0.298
+  },
+  {
+    "lyric": "My furs is Mongolian, my ice brought the goalies in",
+    "start": 70.0,
+    "end": 74.0,
+    "line_index": 29,
+    "confidence": 0.347
+  },
+  {
+    "lyric": "And I embody every characteristic of the egotistic",
+    "start": 60.8,
+    "end": 64.0,
+    "line_index": 30,
+    "confidence": 0.382
+  },
+  {
+    "lyric": "He knows, he's so fucking gifted",
+    "start": 51.8,
+    "end": 54.2,
+    "line_index": 31,
+    "confidence": 0.317
+  },
+  {
+    "lyric": "I just needed time alone with my own thoughts",
+    "start": 30.0,
+    "end": 34.0,
+    "line_index": 32,
+    "confidence": 0.362
+  },
+  {
+    "lyric": "Got treasures in my mind but couldn't open up my own vault",
+    "start": 5.0,
+    "end": 9.0,
+    "line_index": 33,
+    "confidence": 0.346
+  },
+  {
+    "lyric": "My childlike creativity, purity and honesty",
+    "start": 70.0,
+    "end": 74.0,
+    "line_index": 34,
+    "confidence": 0.311
+  },
+  {
+    "lyric": "Is honestly being crowded by these grown thoughts",
+    "start": 5.0,
+    "end": 9.0,
+    "line_index": 35,
+    "confidence": 0.4
+  },
+  {
+    "lyric": "Reality is catching up with me",
+    "start": 5.0,
+    "end": 9.0,
+    "line_index": 36,
+    "confidence": 0.316
+  },
+  {
+    "lyric": "Taking my inner child, I'm fighting for custody",
+    "start": 70.0,
+    "end": 74.0,
+    "line_index": 37,
+    "confidence": 0.426
+  },
+  {
+    "lyric": "With these responsibilities that they entrusted me",
+    "start": 71.0,
+    "end": 75.0,
+    "line_index": 38,
+    "confidence": 0.449
+  },
+  {
+    "lyric": "As I look down at my diamond encrusted piece",
+    "start": 47.717,
+    "end": 49.667,
+    "line_index": 39,
+    "confidence": 0.299
+  },
+  {
+    "lyric": "Colin Powells, Austin Powers",
+    "start": 5.0,
+    "end": 9.0,
+    "line_index": 49,
+    "confidence": 0.356
+  },
+  {
+    "lyric": "Lost in translation with a whole fucking nation",
+    "start": 5.0,
+    "end": 9.0,
+    "line_index": 50,
+    "confidence": 0.323
+  },
+  {
+    "lyric": "They say I was the abomination of Obama's nation",
+    "start": 68.158,
+    "end": 72.158,
+    "line_index": 51,
+    "confidence": 0.357
+  },
+  {
+    "lyric": "Well that's a pretty bad way to start the conversation",
+    "start": 70.0,
+    "end": 74.0,
+    "line_index": 52,
+    "confidence": 0.333
+  },
+  {
+    "lyric": "At the end of the day, god damn it I'm killing this shit",
+    "start": 67.632,
+    "end": 71.632,
+    "line_index": 53,
+    "confidence": 0.366
+  },
+  {
+    "lyric": "I know damn well y'all feeling this shit",
+    "start": 61.2,
+    "end": 64.4,
+    "line_index": 54,
+    "confidence": 0.319
+  },
+  {
+    "lyric": "I don't need your pussy, bitch, I'm on my own dick",
+    "start": 30.0,
+    "end": 34.0,
+    "line_index": 55,
+    "confidence": 0.355
+  },
+  {
+    "lyric": "I ain't gotta power trip, who you going home with?",
+    "start": 5.0,
+    "end": 9.0,
+    "line_index": 56,
+    "confidence": 0.383
+  },
+  {
+    "lyric": "How 'Ye doing? I'm surviving",
+    "start": 5.0,
+    "end": 9.0,
+    "line_index": 57,
+    "confidence": 0.384
+  },
+  {
+    "lyric": "I was drinking earlier, now I'm driving",
+    "start": 66.579,
+    "end": 70.263,
+    "line_index": 58,
+    "confidence": 0.327
+  },
+  {
+    "lyric": "I got the power to make your life so exciting",
+    "start": 5.0,
+    "end": 9.0,
+    "line_index": 60,
+    "confidence": 0.484
+  },
+  {
+    "lyric": "Now this will be a beautiful death",
+    "start": 72.0,
+    "end": 76.0,
+    "line_index": 61,
+    "confidence": 0.366
+  },
+  {
+    "lyric": "I'm jumping out the window, I'm letting everything go",
+    "start": 5.0,
+    "end": 9.0,
+    "line_index": 62,
+    "confidence": 0.531
+  },
+  {
+    "lyric": "You got the power to let power go?",
+    "start": 70.0,
+    "end": 74.0,
+    "line_index": 70,
+    "confidence": 0.519
+  }
+]

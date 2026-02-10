@@ -1,0 +1,163 @@
+[
+  {
+    "lyric": "Sun is down, freezing cold",
+    "start": 25.0,
+    "end": 27.941,
+    "line_index": 2,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "That's how we already know winter's here",
+    "start": 30.37,
+    "end": 32.963,
+    "line_index": 3,
+    "confidence": 0.729
+  },
+  {
+    "lyric": "My dawg would probably do it for a Louis belt",
+    "start": 32.963,
+    "end": 36.667,
+    "line_index": 4,
+    "confidence": 0.51
+  },
+  {
+    "lyric": "That's just all he know he don't know nothing else",
+    "start": 36.296,
+    "end": 40.0,
+    "line_index": 5,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Going on you with the pick and roll",
+    "start": 52.5,
+    "end": 56.5,
+    "line_index": 9,
+    "confidence": 0.831
+  },
+  {
+    "lyric": "Young LaFlame, he in sicko mode",
+    "start": 60.714,
+    "end": 64.714,
+    "line_index": 10,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "At the gate outside, when they pull up, they get me loose",
+    "start": 67.703,
+    "end": 70.946,
+    "line_index": 12,
+    "confidence": 0.871
+  },
+  {
+    "lyric": "This shit way too big, when we pull up gimme the loot (gimme the loot!)",
+    "start": 73.636,
+    "end": 77.636,
+    "line_index": 14,
+    "confidence": 0.779
+  },
+  {
+    "lyric": "Was off the Remy, had a Papoose",
+    "start": 77.576,
+    "end": 79.697,
+    "line_index": 15,
+    "confidence": 0.679
+  },
+  {
+    "lyric": "Had to hit my old town to duck the news",
+    "start": 79.0,
+    "end": 83.0,
+    "line_index": 16,
+    "confidence": 0.855
+  },
+  {
+    "lyric": "Two-four hour lockdown, we made no moves",
+    "start": 83.714,
+    "end": 85.714,
+    "line_index": 17,
+    "confidence": 0.543
+  },
+  {
+    "lyric": "Now it's 4:00 a.m. and I'm back up popping with the crew",
+    "start": 85.714,
+    "end": 89.143,
+    "line_index": 18,
+    "confidence": 0.871
+  },
+  {
+    "lyric": "I just landed in, Chase B mixes pop like Jamba Juice",
+    "start": 89.412,
+    "end": 92.647,
+    "line_index": 19,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Different colored chains, think my jeweler really selling fruits",
+    "start": 92.258,
+    "end": 95.161,
+    "line_index": 20,
+    "confidence": 0.844
+  },
+  {
+    "lyric": "And they choking, man, know the crackers wish it was a noose",
+    "start": 95.161,
+    "end": 99.032,
+    "line_index": 21,
+    "confidence": 0.633
+  },
+  {
+    "lyric": "To win the retreat, we all in too deep",
+    "start": 95.0,
+    "end": 99.0,
+    "line_index": 23,
+    "confidence": 0.753
+  },
+  {
+    "lyric": "Play-Play-Playing for keeps, don't play us for weak (someone said)",
+    "start": 160.0,
+    "end": 164.0,
+    "line_index": 24,
+    "confidence": 0.384
+  },
+  {
+    "lyric": "This shit way too formal, ya'll know I don't follow suit",
+    "start": 110.0,
+    "end": 114.0,
+    "line_index": 27,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Stacey Dash, most of these girls ain't got a clue",
+    "start": 115.238,
+    "end": 119.238,
+    "line_index": 28,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "All of these hoes I made off records I produced",
+    "start": 119.706,
+    "end": 122.647,
+    "line_index": 29,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "I might take all my exes and put 'em all in a group",
+    "start": 123.333,
+    "end": 127.333,
+    "line_index": 30,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Hit my eses, I need the bootch",
+    "start": 127.667,
+    "end": 130.0,
+    "line_index": 31,
+    "confidence": 0.543
+  },
+  {
+    "lyric": "'Bout to turn this function to Bonnaroo",
+    "start": 129.815,
+    "end": 132.407,
+    "line_index": 32,
+    "confidence": 0.679
+  }
+]

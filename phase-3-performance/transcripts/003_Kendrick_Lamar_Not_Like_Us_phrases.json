@@ -1,0 +1,352 @@
+[
+  {
+    "lyric": "Psst, I see dead people",
+    "start": 0.0,
+    "end": 4.0,
+    "line_index": 0,
+    "confidence": 0.872
+  },
+  {
+    "lyric": "Deebo, any rap nigga, he a free-throw",
+    "start": 225.161,
+    "end": 227.419,
+    "line_index": 3,
+    "confidence": 0.407
+  },
+  {
+    "lyric": "Man down, call an amberlamps, tell him, \"Breathe, bro\"",
+    "start": 11.129,
+    "end": 14.032,
+    "line_index": 4,
+    "confidence": 0.633
+  },
+  {
+    "lyric": "Nail a nigga to the cross, he walk around like Teezo",
+    "start": 13.902,
+    "end": 16.585,
+    "line_index": 5,
+    "confidence": 0.691
+  },
+  {
+    "lyric": "What's up with these jabroni-ass niggas tryna see Compton?",
+    "start": 16.585,
+    "end": 18.78,
+    "line_index": 6,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "The industry can hate me, fuck 'em all and they mama",
+    "start": 215.0,
+    "end": 219.0,
+    "line_index": 7,
+    "confidence": 0.421
+  },
+  {
+    "lyric": "How many opps you really got? I mean, it's too many options",
+    "start": 20.952,
+    "end": 23.81,
+    "line_index": 8,
+    "confidence": 0.871
+  },
+  {
+    "lyric": "I'm finna pass on this body, I'm John Stockton",
+    "start": 25.172,
+    "end": 28.276,
+    "line_index": 9,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Beat yo' ass and hide the Bible if God watchin'",
+    "start": 25.0,
+    "end": 28.704,
+    "line_index": 10,
+    "confidence": 0.855
+  },
+  {
+    "lyric": "Sometimes you gotta pop out and show niggas",
+    "start": 29.074,
+    "end": 32.037,
+    "line_index": 11,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Certified boogeyman, I'm the one that upped the score with 'em",
+    "start": 32.25,
+    "end": 35.0,
+    "line_index": 12,
+    "confidence": 0.691
+  },
+  {
+    "lyric": "Walk him down, whole time I know he got some ho in him",
+    "start": 35.0,
+    "end": 38.25,
+    "line_index": 13,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Pole on him, extort shit, bully the flow on him",
+    "start": 38.571,
+    "end": 40.952,
+    "line_index": 14,
+    "confidence": 0.855
+  },
+  {
+    "lyric": "Say, Drake, I hear you like 'em young",
+    "start": 40.0,
+    "end": 42.105,
+    "line_index": 15,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "You better not ever go to cell block one",
+    "start": 42.857,
+    "end": 45.0,
+    "line_index": 16,
+    "confidence": 0.633
+  },
+  {
+    "lyric": "To any bitch that talk to him and they in love",
+    "start": 44.474,
+    "end": 47.368,
+    "line_index": 17,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Just make sure you hide your lil' sister from him",
+    "start": 47.368,
+    "end": 50.0,
+    "line_index": 18,
+    "confidence": 0.855
+  },
+  {
+    "lyric": "They tell me Chubbs the only one that get your hand-me-downs",
+    "start": 49.884,
+    "end": 52.442,
+    "line_index": 19,
+    "confidence": 0.864
+  },
+  {
+    "lyric": "And PARTY at the party, playin' with his nose now",
+    "start": 52.442,
+    "end": 54.767,
+    "line_index": 20,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "And Baka got a weird case, why is he around?",
+    "start": 55.714,
+    "end": 58.571,
+    "line_index": 21,
+    "confidence": 0.76
+  },
+  {
+    "lyric": "Certified Lover Boy? Certified pedophiles",
+    "start": 58.571,
+    "end": 60.0,
+    "line_index": 22,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Why you trollin' like a bitch? Ain't you tired?",
+    "start": 63.077,
+    "end": 66.538,
+    "line_index": 25,
+    "confidence": 0.844
+  },
+  {
+    "lyric": "Tryna strike a chord and it's probably A minor",
+    "start": 66.538,
+    "end": 70.0,
+    "line_index": 26,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "You think the Bay gon' let you disrespect Pac, nigga?",
+    "start": 82.5,
+    "end": 85.0,
+    "line_index": 29,
+    "confidence": 0.855
+  },
+  {
+    "lyric": "I think that Oakland show gon' be your last stop, nigga",
+    "start": 85.0,
+    "end": 87.75,
+    "line_index": 30,
+    "confidence": 0.864
+  },
+  {
+    "lyric": "Did Cole fouI, I don't know why you still pretendin'",
+    "start": 88.056,
+    "end": 90.833,
+    "line_index": 31,
+    "confidence": 0.665
+  },
+  {
+    "lyric": "What is the owl? Bird niggas and bird bitches, go",
+    "start": 90.833,
+    "end": 93.611,
+    "line_index": 32,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "The audience not dumb, shape the stories how you want",
+    "start": 92.632,
+    "end": 95.263,
+    "line_index": 33,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Hey, Drake, they're not slow",
+    "start": 95.263,
+    "end": 96.579,
+    "line_index": 34,
+    "confidence": 0.57
+  },
+  {
+    "lyric": "Rabbit hole is still deep, I can go further, I promise",
+    "start": 96.316,
+    "end": 99.211,
+    "line_index": 35,
+    "confidence": 0.765
+  },
+  {
+    "lyric": "Ain't that somethin'? B-Rad stands for bitch and you Malibu most wanted",
+    "start": 99.878,
+    "end": 102.805,
+    "line_index": 36,
+    "confidence": 0.637
+  },
+  {
+    "lyric": "Ain't no law, boy, you ballboy, fetch Gatorade or somethin'",
+    "start": 102.561,
+    "end": 105.0,
+    "line_index": 37,
+    "confidence": 0.51
+  },
+  {
+    "lyric": "Since 2009, I had this bitch jumpin'",
+    "start": 105.0,
+    "end": 107.059,
+    "line_index": 38,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "You niggas'll get a wedgie, be flipped over your boxers",
+    "start": 107.059,
+    "end": 110.0,
+    "line_index": 39,
+    "confidence": 0.665
+  },
+  {
+    "lyric": "What OVO for? The \"Other Vaginal Option\"? Pussy",
+    "start": 160.833,
+    "end": 164.833,
+    "line_index": 40,
+    "confidence": 0.387
+  },
+  {
+    "lyric": "Nigga better straighten they posture, got famous all up in Compton",
+    "start": 15.952,
+    "end": 18.571,
+    "line_index": 41,
+    "confidence": 0.386
+  },
+  {
+    "lyric": "Might write this for the doctorate, tell the pop star quit hidin'",
+    "start": 114.571,
+    "end": 118.0,
+    "line_index": 42,
+    "confidence": 0.541
+  },
+  {
+    "lyric": "Fuck a caption, want action, no accident",
+    "start": 118.0,
+    "end": 120.0,
+    "line_index": 43,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "And I'm hands-on, he fuck around, get polished",
+    "start": 119.783,
+    "end": 121.522,
+    "line_index": 44,
+    "confidence": 0.637
+  },
+  {
+    "lyric": "Fucked on Wayne girl while he was in jail, that's connivin'",
+    "start": 121.628,
+    "end": 124.186,
+    "line_index": 45,
+    "confidence": 0.777
+  },
+  {
+    "lyric": "Then get his face tatted like a bitch apologizin'",
+    "start": 124.186,
+    "end": 126.279,
+    "line_index": 46,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "I'm glad DeRoz' came home, y'all didn't deserve him neither",
+    "start": 126.279,
+    "end": 128.605,
+    "line_index": 47,
+    "confidence": 0.855
+  },
+  {
+    "lyric": "From Alondra down to Central, nigga better not speak on Serena",
+    "start": 128.571,
+    "end": 131.19,
+    "line_index": 48,
+    "confidence": 0.777
+  },
+  {
+    "lyric": "And your homeboy need subpoena, that predator move in flocks",
+    "start": 131.19,
+    "end": 133.571,
+    "line_index": 49,
+    "confidence": 0.665
+  },
+  {
+    "lyric": "That name gotta be registered and placed on neighborhood watch",
+    "start": 130.0,
+    "end": 133.333,
+    "line_index": 50,
+    "confidence": 0.855
+  },
+  {
+    "lyric": "I lean on you niggas like another line of Wock'",
+    "start": 135.682,
+    "end": 137.955,
+    "line_index": 51,
+    "confidence": 0.855
+  },
+  {
+    "lyric": "Put the wrong label on me, I'ma get 'em dropped, ay",
+    "start": 140.682,
+    "end": 143.182,
+    "line_index": 53,
+    "confidence": 0.695
+  },
+  {
+    "lyric": "Sweet Chin Music, and I won't pass the aux, ay",
+    "start": 138.864,
+    "end": 141.136,
+    "line_index": 54,
+    "confidence": 0.765
+  },
+  {
+    "lyric": "How many stocks do I really have in stock? Ay",
+    "start": 145.263,
+    "end": 147.895,
+    "line_index": 55,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Devil is a lie, he a 69 God, ay",
+    "start": 150.0,
+    "end": 152.368,
+    "line_index": 57,
+    "confidence": 0.739
+  }
+]

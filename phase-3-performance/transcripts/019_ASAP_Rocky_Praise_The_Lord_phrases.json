@@ -1,0 +1,268 @@
+[
+  {
+    "lyric": "Get it, text a message I don't know the number",
+    "start": 25.0,
+    "end": 29.0,
+    "line_index": 0,
+    "confidence": 1.0
+  },
+  {
+    "lyric": "Flexin' on these niggas, every bone and muscle",
+    "start": 35.0,
+    "end": 37.857,
+    "line_index": 1,
+    "confidence": 0.637
+  },
+  {
+    "lyric": "Steady takin' shots, but never hurtin' numbers",
+    "start": 37.5,
+    "end": 40.0,
+    "line_index": 2,
+    "confidence": 0.607
+  },
+  {
+    "lyric": "Even then, y'all don't worry nothin'",
+    "start": 40.0,
+    "end": 42.143,
+    "line_index": 3,
+    "confidence": 0.792
+  },
+  {
+    "lyric": "And I'd like to give a shoutout to my niggas with the game plan",
+    "start": 42.143,
+    "end": 46.143,
+    "line_index": 4,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "And shoutouts all my niggas with escape plans",
+    "start": 47.143,
+    "end": 50.0,
+    "line_index": 5,
+    "confidence": 0.831
+  },
+  {
+    "lyric": "We could either rain check or we can make plans",
+    "start": 51.786,
+    "end": 55.357,
+    "line_index": 7,
+    "confidence": 0.665
+  },
+  {
+    "lyric": "Pockets loaded, rocket loaded, okay, let's rock and roll this",
+    "start": 55.357,
+    "end": 58.929,
+    "line_index": 8,
+    "confidence": 0.57
+  },
+  {
+    "lyric": "Time to go, Lock, Stock and Two Smokin' Barrels",
+    "start": 58.667,
+    "end": 61.667,
+    "line_index": 9,
+    "confidence": 0.756
+  },
+  {
+    "lyric": "Locked and loaded, diamonds glowin', chart-climbin' on 'em",
+    "start": 62.0,
+    "end": 64.667,
+    "line_index": 10,
+    "confidence": 0.637
+  },
+  {
+    "lyric": "You think I'm jumpin' out the window how I got 'em open",
+    "start": 60.0,
+    "end": 64.0,
+    "line_index": 11,
+    "confidence": 0.792
+  },
+  {
+    "lyric": "Line around the corner, line 'em up the block and over",
+    "start": 68.333,
+    "end": 71.667,
+    "line_index": 12,
+    "confidence": 0.756
+  },
+  {
+    "lyric": "Times I even stop the smokin' when it's time to focus",
+    "start": 71.667,
+    "end": 75.0,
+    "line_index": 13,
+    "confidence": 0.864
+  },
+  {
+    "lyric": "My shades Dior, my pants velour",
+    "start": 165.968,
+    "end": 167.903,
+    "line_index": 14,
+    "confidence": 0.51
+  },
+  {
+    "lyric": "Create, explore, expand, conquer",
+    "start": 77.895,
+    "end": 80.0,
+    "line_index": 15,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "I came, I saw, I came, I saw",
+    "start": 78.636,
+    "end": 82.273,
+    "line_index": 16,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "I praise the Lord, then break the law",
+    "start": 94.444,
+    "end": 97.407,
+    "line_index": 17,
+    "confidence": 0.831
+  },
+  {
+    "lyric": "I take what's mine, then take some more",
+    "start": 85.385,
+    "end": 88.462,
+    "line_index": 18,
+    "confidence": 0.831
+  },
+  {
+    "lyric": "It rains, it pours, it rains, it pours",
+    "start": 88.2,
+    "end": 91.4,
+    "line_index": 19,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Yeah, I sold the pack, the loose, the hard (yeah)",
+    "start": 103.333,
+    "end": 107.333,
+    "line_index": 24,
+    "confidence": 0.855
+  },
+  {
+    "lyric": "I listened to X, I peeped the bars (yeah)",
+    "start": 107.308,
+    "end": 110.769,
+    "line_index": 25,
+    "confidence": 0.739
+  },
+  {
+    "lyric": "The snakes, the rats, the cats, the dogs",
+    "start": 110.385,
+    "end": 113.462,
+    "line_index": 26,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "The games a trap, protect your heart (yeah)",
+    "start": 112.857,
+    "end": 116.667,
+    "line_index": 27,
+    "confidence": 0.531
+  },
+  {
+    "lyric": "I waited in line, return, refine",
+    "start": 116.19,
+    "end": 119.048,
+    "line_index": 28,
+    "confidence": 0.633
+  },
+  {
+    "lyric": "The new design, it's time to shine",
+    "start": 118.478,
+    "end": 121.522,
+    "line_index": 29,
+    "confidence": 0.679
+  },
+  {
+    "lyric": "I hustle, I flex, the world is mine",
+    "start": 125.6,
+    "end": 128.8,
+    "line_index": 31,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "So please believe, allow the greaze",
+    "start": 125.6,
+    "end": 128.0,
+    "line_index": 32,
+    "confidence": 0.567
+  },
+  {
+    "lyric": "These niggas disease, don't speak we squeeze (squeeze)",
+    "start": 130.909,
+    "end": 134.545,
+    "line_index": 33,
+    "confidence": 0.85
+  },
+  {
+    "lyric": "I make the devil go weak the knees",
+    "start": 133.846,
+    "end": 136.923,
+    "line_index": 34,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "You hate, you're lame, your loss",
+    "start": 136.923,
+    "end": 139.231,
+    "line_index": 35,
+    "confidence": 0.633
+  },
+  {
+    "lyric": "She came, I came, now what's my name?",
+    "start": 162.963,
+    "end": 165.926,
+    "line_index": 44,
+    "confidence": 0.831
+  },
+  {
+    "lyric": "My chain, my pants, my pants with the chain",
+    "start": 165.926,
+    "end": 169.259,
+    "line_index": 45,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "They know it's me, the hat and the shades",
+    "start": 169.194,
+    "end": 172.097,
+    "line_index": 46,
+    "confidence": 0.744
+  },
+  {
+    "lyric": "They heard my voice and they ran to the stage",
+    "start": 172.667,
+    "end": 176.0,
+    "line_index": 47,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "My Vans, my braids, my mans, my babe",
+    "start": 175.0,
+    "end": 177.963,
+    "line_index": 48,
+    "confidence": 0.712
+  },
+  {
+    "lyric": "My girls, my ex, my hoes that I left",
+    "start": 177.963,
+    "end": 181.296,
+    "line_index": 49,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "The way I stepped, out the car, that's a flex",
+    "start": 181.667,
+    "end": 185.0,
+    "line_index": 50,
+    "confidence": 0.76
+  },
+  {
+    "lyric": "Give thanks, get fresh, praise the Lord then finesse, bless",
+    "start": 189.444,
+    "end": 193.148,
+    "line_index": 51,
+    "confidence": 0.51
+  }
+]

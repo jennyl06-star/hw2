@@ -1,0 +1,121 @@
+[
+  {
+    "lyric": "Yeah, straight out the fuckin' dungeons of rap",
+    "start": 11.364,
+    "end": 15.0,
+    "line_index": 3,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Where fake niggas don't make it back",
+    "start": 15.0,
+    "end": 19.0,
+    "line_index": 4,
+    "confidence": 0.814
+  },
+  {
+    "lyric": "I don't know how to start this shit, yo, now",
+    "start": 15.0,
+    "end": 19.0,
+    "line_index": 5,
+    "confidence": 0.537
+  },
+  {
+    "lyric": "Rappers, I monkey flip 'em with the funky rhythm",
+    "start": 20.0,
+    "end": 24.0,
+    "line_index": 6,
+    "confidence": 0.756
+  },
+  {
+    "lyric": "I be kickin', musician inflictin' composition of pain, I'm like Scarface sniffin' cocaine",
+    "start": 26.154,
+    "end": 30.154,
+    "line_index": 7,
+    "confidence": 0.642
+  },
+  {
+    "lyric": "Holdin' an M16, see, with the pen I'm extreme",
+    "start": 31.154,
+    "end": 34.615,
+    "line_index": 8,
+    "confidence": 0.567
+  },
+  {
+    "lyric": "Now, bullet holes left in my peepholes",
+    "start": 33.939,
+    "end": 36.061,
+    "line_index": 9,
+    "confidence": 0.814
+  },
+  {
+    "lyric": "I'm suited up with street clothes, hand me a .9, and I'll defeat foes",
+    "start": 36.579,
+    "end": 40.263,
+    "line_index": 10,
+    "confidence": 0.679
+  },
+  {
+    "lyric": "Y'all know my steelo, with or without the airplay",
+    "start": 40.526,
+    "end": 42.895,
+    "line_index": 11,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "I keep some E&J, sittin' bent up in the stairway",
+    "start": 43.784,
+    "end": 46.486,
+    "line_index": 12,
+    "confidence": 0.595
+  },
+  {
+    "lyric": "Or either on the corner bettin' Grants with the cee-lo champs",
+    "start": 46.486,
+    "end": 49.459,
+    "line_index": 13,
+    "confidence": 0.864
+  },
+  {
+    "lyric": "Laughin' at base-heads, tryna sell some broken amps",
+    "start": 49.688,
+    "end": 52.188,
+    "line_index": 14,
+    "confidence": 0.531
+  },
+  {
+    "lyric": "G-packs get off quick, forever niggas talk shit",
+    "start": 52.0,
+    "end": 54.667,
+    "line_index": 15,
+    "confidence": 0.712
+  },
+  {
+    "lyric": "Reminiscin' about the last time the task force flipped",
+    "start": 54.667,
+    "end": 57.667,
+    "line_index": 16,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Niggas be runnin' through the block shootin'",
+    "start": 57.667,
+    "end": 60.0,
+    "line_index": 17,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Time to start the revolution, catch a body, head for Houston",
+    "start": 59.706,
+    "end": 62.941,
+    "line_index": 18,
+    "confidence": 0.864
+  },
+  {
+    "lyric": "I ran like a cheetah, with thoughts of an assassin",
+    "start": 66.111,
+    "end": 68.889,
+    "line_index": 20,
+    "confidence": 0.95
+  }
+]

@@ -1,0 +1,212 @@
+[
+  {
+    "lyric": "Call it how it is, Hendrix",
+    "start": 80.0,
+    "end": 84.0,
+    "line_index": 0,
+    "confidence": 0.605
+  },
+  {
+    "lyric": "I promise, I swear, I swear, you heard, spit it, yo",
+    "start": 119.211,
+    "end": 123.211,
+    "line_index": 1,
+    "confidence": 0.375
+  },
+  {
+    "lyric": "Chase a check (chase it), never chase a bitch (don't chase no bitches)",
+    "start": 165.0,
+    "end": 169.0,
+    "line_index": 5,
+    "confidence": 0.592
+  },
+  {
+    "lyric": "Mask on, fuck it, mask off (ma-, excuse me?)",
+    "start": 170.0,
+    "end": 174.0,
+    "line_index": 6,
+    "confidence": 0.787
+  },
+  {
+    "lyric": "Two cups (cup), toast up with the gang (gang-gang)",
+    "start": 115.0,
+    "end": 119.0,
+    "line_index": 10,
+    "confidence": 0.567
+  },
+  {
+    "lyric": "From food stamps to a whole 'nother domain, yeah",
+    "start": 122.143,
+    "end": 126.143,
+    "line_index": 11,
+    "confidence": 0.393
+  },
+  {
+    "lyric": "Out the bottom (yeah), I'm the livin' proof (super)",
+    "start": 133.0,
+    "end": 137.0,
+    "line_index": 12,
+    "confidence": 0.425
+  },
+  {
+    "lyric": "Ain't compromisin', half a million on the coupe (gang-gang)",
+    "start": 132.5,
+    "end": 136.5,
+    "line_index": 13,
+    "confidence": 0.739
+  },
+  {
+    "lyric": "Drug houses (where?), lookin' like Peru (whoa-whoa-whoa)",
+    "start": 136.5,
+    "end": 140.0,
+    "line_index": 14,
+    "confidence": 0.543
+  },
+  {
+    "lyric": "Graduated (crazy), I was overdue (I'm on due)",
+    "start": 141.667,
+    "end": 145.667,
+    "line_index": 15,
+    "confidence": 0.435
+  },
+  {
+    "lyric": "Pink molly (molly), I can barely move (barely move)",
+    "start": 135.0,
+    "end": 139.0,
+    "line_index": 16,
+    "confidence": 0.567
+  },
+  {
+    "lyric": "Ask about me ('bout me), I'm gon' bust a move (ay, I'm provin')",
+    "start": 140.0,
+    "end": 144.0,
+    "line_index": 17,
+    "confidence": 0.587
+  },
+  {
+    "lyric": "Rick James (James), 33 chains (33)",
+    "start": 149.118,
+    "end": 152.647,
+    "line_index": 18,
+    "confidence": 0.637
+  },
+  {
+    "lyric": "Ocean air (air), cruisin' Biscayne (big foreigns)",
+    "start": 140.833,
+    "end": 144.833,
+    "line_index": 19,
+    "confidence": 0.333
+  },
+  {
+    "lyric": "Top off (yeah), that's a liability (big foreign)",
+    "start": 150.0,
+    "end": 154.0,
+    "line_index": 20,
+    "confidence": 0.623
+  },
+  {
+    "lyric": "Hit the gas (gas), boostin' my adrenaline (big foreign)",
+    "start": 155.714,
+    "end": 159.714,
+    "line_index": 21,
+    "confidence": 0.38
+  },
+  {
+    "lyric": "Ford or Maybach (Ford or), I drive anything (yeah)",
+    "start": 185.0,
+    "end": 189.0,
+    "line_index": 30,
+    "confidence": 0.43
+  },
+  {
+    "lyric": "Buy my Range (yeah), make 'em go insane (yeah)",
+    "start": 185.0,
+    "end": 189.0,
+    "line_index": 31,
+    "confidence": 0.652
+  },
+  {
+    "lyric": "My guillotine, drank promethazine (drank prometh')",
+    "start": 195.0,
+    "end": 198.529,
+    "line_index": 33,
+    "confidence": 0.318
+  },
+  {
+    "lyric": "TEC and beams (yeah), go to those extremes (aight, let's go, let's go)",
+    "start": 145.0,
+    "end": 149.0,
+    "line_index": 34,
+    "confidence": 0.389
+  },
+  {
+    "lyric": "Parliament (parliament), calamari Wednesday (yeah)",
+    "start": 160.0,
+    "end": 164.0,
+    "line_index": 35,
+    "confidence": 0.358
+  },
+  {
+    "lyric": "Parlay in Vegas, we was in attendance (what's good, what's good?)",
+    "start": 226.481,
+    "end": 230.481,
+    "line_index": 36,
+    "confidence": 0.328
+  },
+  {
+    "lyric": "Theo-Dur prescriptions (yeah), focus on the missions (pour my four)",
+    "start": 211.0,
+    "end": 215.0,
+    "line_index": 38,
+    "confidence": 0.434
+  },
+  {
+    "lyric": "Intermission (hol' up), never take a break (we can pull up)",
+    "start": 165.0,
+    "end": 169.0,
+    "line_index": 39,
+    "confidence": 0.386
+  },
+  {
+    "lyric": "Switch states (switch them), touch down, foreign plates (switch)",
+    "start": 176.111,
+    "end": 180.111,
+    "line_index": 40,
+    "confidence": 0.382
+  },
+  {
+    "lyric": "Ain't no way, ain't no fuckin' way (no)",
+    "start": 221.538,
+    "end": 225.538,
+    "line_index": 41,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "We call the play, we didn't come to play (no)",
+    "start": 227.963,
+    "end": 231.667,
+    "line_index": 42,
+    "confidence": 0.637
+  },
+  {
+    "lyric": "Rob the bank, we gon' rob the game (again)",
+    "start": 230.185,
+    "end": 233.519,
+    "line_index": 43,
+    "confidence": 0.729
+  },
+  {
+    "lyric": "They gang, we gang (gang), but they are not the same (Freebandz)",
+    "start": 197.353,
+    "end": 201.353,
+    "line_index": 44,
+    "confidence": 0.406
+  },
+  {
+    "lyric": "Gas gone, never nod off",
+    "start": 171.667,
+    "end": 175.667,
+    "line_index": 56,
+    "confidence": 0.478
+  }
+]

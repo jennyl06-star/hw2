@@ -1,0 +1,352 @@
+[
+  {
+    "lyric": "To all the teachers that told me I'd never amount to nothin'",
+    "start": 2.381,
+    "end": 6.381,
+    "line_index": 1,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Make some money to feed my daughter (it's all good)",
+    "start": 14.651,
+    "end": 16.977,
+    "line_index": 5,
+    "confidence": 0.85
+  },
+  {
+    "lyric": "It was all a dream, I used to read Word Up! magazine",
+    "start": 21.0,
+    "end": 25.0,
+    "line_index": 8,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Salt-n-Pepa and Heavy D up in the limousine",
+    "start": 25.0,
+    "end": 27.667,
+    "line_index": 9,
+    "confidence": 0.831
+  },
+  {
+    "lyric": "I let my tape rock 'til my tape popped",
+    "start": 32.0,
+    "end": 35.0,
+    "line_index": 12,
+    "confidence": 0.739
+  },
+  {
+    "lyric": "You never thought that hip-hop would take it this far",
+    "start": 43.75,
+    "end": 46.875,
+    "line_index": 17,
+    "confidence": 0.855
+  },
+  {
+    "lyric": "Now I'm in the limelight 'cause I rhyme tight",
+    "start": 46.875,
+    "end": 49.688,
+    "line_index": 18,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Time to get paid, blow up like the World Trade",
+    "start": 48.462,
+    "end": 52.308,
+    "line_index": 19,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Remember when I used to eat sardines for dinner",
+    "start": 54.412,
+    "end": 57.059,
+    "line_index": 21,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "I'm blowin' up like you thought I would",
+    "start": 61.562,
+    "end": 64.062,
+    "line_index": 24,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "And if you don't know, now you know, nigga",
+    "start": 205.0,
+    "end": 209.0,
+    "line_index": 27,
+    "confidence": 1.0
+  },
+  {
+    "lyric": "I made the change from a common thief",
+    "start": 85.0,
+    "end": 89.0,
+    "line_index": 36,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "To up close and personal with Robin Leach",
+    "start": 92.188,
+    "end": 94.688,
+    "line_index": 37,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Spread love, it's the Brooklyn way",
+    "start": 98.611,
+    "end": 100.278,
+    "line_index": 40,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Now they write letters 'cause they miss me",
+    "start": 103.889,
+    "end": 106.111,
+    "line_index": 43,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Now honeys play me close like butter play toast",
+    "start": 111.333,
+    "end": 114.333,
+    "line_index": 46,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "From the Mississippi down to the East Coast",
+    "start": 114.333,
+    "end": 117.0,
+    "line_index": 47,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Sold-out seats to hear Biggie Smalls speak",
+    "start": 118.793,
+    "end": 121.207,
+    "line_index": 49,
+    "confidence": 0.814
+  },
+  {
+    "lyric": "Puttin' five karats in my baby girl's ear",
+    "start": 123.077,
+    "end": 126.154,
+    "line_index": 51,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Considered a fool 'cause I dropped out of high school",
+    "start": 127.727,
+    "end": 131.727,
+    "line_index": 53,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Stereotypes of a black male misunderstood",
+    "start": 132.273,
+    "end": 135.0,
+    "line_index": 54,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "When I was dead broke, man, I couldn't picture this",
+    "start": 161.538,
+    "end": 165.385,
+    "line_index": 66,
+    "confidence": 0.855
+  },
+  {
+    "lyric": "50-inch screen, money-green leather sofa",
+    "start": 165.385,
+    "end": 167.308,
+    "line_index": 67,
+    "confidence": 0.68
+  },
+  {
+    "lyric": "Got two rides, a limousine with a chauffeur",
+    "start": 168.214,
+    "end": 171.071,
+    "line_index": 68,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Celebratin' every day, no more public housin'",
+    "start": 176.786,
+    "end": 179.286,
+    "line_index": 72,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Now my mom pimps a Ac' with minks on her back",
+    "start": 182.059,
+    "end": 185.294,
+    "line_index": 74,
+    "confidence": 0.691
+  },
+  {
+    "lyric": "Smiles every time my face is up in The Source",
+    "start": 187.727,
+    "end": 190.758,
+    "line_index": 76,
+    "confidence": 0.855
+  },
+  {
+    "lyric": "We used to fuss when the landlord dissed us",
+    "start": 190.758,
+    "end": 193.485,
+    "line_index": 77,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Now we sip Champagne when we thirsty",
+    "start": 197.333,
+    "end": 199.667,
+    "line_index": 80,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "'Cause I went from negative to positive",
+    "start": 203.333,
+    "end": 205.926,
+    "line_index": 82,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Representin' B-Town in the house",
+    "start": 230.652,
+    "end": 232.826,
+    "line_index": 93,
+    "confidence": 0.57
+  },
+  {
+    "lyric": "Biggie Smalls, it's all good, nigga",
+    "start": 66.111,
+    "end": 69.444,
+    "line_index": 104,
+    "confidence": 0.567
+  },
+  {
+    "lyric": "Junior Mafia, it's all good, nigga",
+    "start": 66.111,
+    "end": 69.444,
+    "line_index": 105,
+    "confidence": 0.567
+  },
+  {
+    "lyric": "Bad Boy, it's all good, nigga",
+    "start": 66.111,
+    "end": 69.444,
+    "line_index": 106,
+    "confidence": 0.567
+  },
+  {
+    "lyric": "To all the teachers that told me I'd never amount to nothin'",
+    "start": 2.381,
+    "end": 6.381,
+    "line_index": 1,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "It was all a dream, I used to read Word Up! magazine",
+    "start": 21.0,
+    "end": 25.0,
+    "line_index": 8,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Salt-n-Pepa and Heavy D up in the limousine",
+    "start": 25.0,
+    "end": 27.667,
+    "line_index": 9,
+    "confidence": 0.831
+  },
+  {
+    "lyric": "I let my tape rock 'til my tape popped",
+    "start": 32.0,
+    "end": 35.0,
+    "line_index": 12,
+    "confidence": 0.739
+  },
+  {
+    "lyric": "You never thought that hip-hop would take it this far",
+    "start": 43.75,
+    "end": 46.875,
+    "line_index": 17,
+    "confidence": 0.855
+  },
+  {
+    "lyric": "Now I'm in the limelight 'cause I rhyme tight",
+    "start": 46.875,
+    "end": 49.688,
+    "line_index": 18,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Time to get paid, blow up like the World Trade",
+    "start": 48.462,
+    "end": 52.308,
+    "line_index": 19,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Remember when I used to eat sardines for dinner",
+    "start": 54.412,
+    "end": 57.059,
+    "line_index": 21,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "I'm blowin' up like you thought I would",
+    "start": 61.562,
+    "end": 64.062,
+    "line_index": 24,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "And if you don't know, now you know, nigga",
+    "start": 205.0,
+    "end": 209.0,
+    "line_index": 27,
+    "confidence": 1.0
+  },
+  {
+    "lyric": "I made the change from a common thief",
+    "start": 85.0,
+    "end": 89.0,
+    "line_index": 36,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "To up close and personal with Robin Leach",
+    "start": 92.188,
+    "end": 94.688,
+    "line_index": 37,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Spread love, it's the Brooklyn way",
+    "start": 98.611,
+    "end": 100.278,
+    "line_index": 40,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Now they write letters 'cause they miss me",
+    "start": 103.889,
+    "end": 106.111,
+    "line_index": 43,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Now honeys play me close like butter play toast",
+    "start": 111.333,
+    "end": 114.333,
+    "line_index": 46,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "From the Mississippi down to the East Coast",
+    "start": 114.333,
+    "end": 117.0,
+    "line_index": 47,
+    "confidence": 0.95
+  }
+]

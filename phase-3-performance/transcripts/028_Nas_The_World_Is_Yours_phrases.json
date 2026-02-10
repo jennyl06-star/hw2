@@ -1,0 +1,352 @@
+[
+  {
+    "lyric": "Whose world is this?",
+    "start": 5.0,
+    "end": 7.5,
+    "line_index": 1,
+    "confidence": 0.712
+  },
+  {
+    "lyric": "It's mine, it's mine, it's mine, whose world is this?",
+    "start": 130.0,
+    "end": 134.0,
+    "line_index": 3,
+    "confidence": 0.627
+  },
+  {
+    "lyric": "I sip the Dom P, watchin' Gandhi 'til I'm charged, then",
+    "start": 20.0,
+    "end": 23.667,
+    "line_index": 8,
+    "confidence": 0.518
+  },
+  {
+    "lyric": "Writin' in my book of rhymes, all the words past the margin",
+    "start": 23.667,
+    "end": 27.667,
+    "line_index": 9,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "To hold the mic I'm throbbin', mechanical movement",
+    "start": 20.0,
+    "end": 22.667,
+    "line_index": 10,
+    "confidence": 0.531
+  },
+  {
+    "lyric": "Understandable smooth shit that murderers move with",
+    "start": 30.938,
+    "end": 33.125,
+    "line_index": 11,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "The thief's theme (the thief's theme), play me at night, they won't act right",
+    "start": 31.25,
+    "end": 35.25,
+    "line_index": 12,
+    "confidence": 0.618
+  },
+  {
+    "lyric": "The fiend of hip-hop has got me stuck like a crack pipe",
+    "start": 36.143,
+    "end": 39.571,
+    "line_index": 13,
+    "confidence": 0.712
+  },
+  {
+    "lyric": "The mind activation, react like I'm facin'",
+    "start": 39.571,
+    "end": 41.571,
+    "line_index": 14,
+    "confidence": 0.679
+  },
+  {
+    "lyric": "Time like Pappy Mason, with pens I'm embracin'",
+    "start": 41.389,
+    "end": 43.611,
+    "line_index": 15,
+    "confidence": 0.637
+  },
+  {
+    "lyric": "Wipe the sweat off my dome, spit the phlegm on the streets",
+    "start": 43.889,
+    "end": 47.222,
+    "line_index": 16,
+    "confidence": 0.712
+  },
+  {
+    "lyric": "Suede Timbs on my feets makes my cipher complete",
+    "start": 47.222,
+    "end": 49.722,
+    "line_index": 17,
+    "confidence": 0.739
+  },
+  {
+    "lyric": "Whether cruisin' in a Sikh's cab or Montero Jeep",
+    "start": 49.737,
+    "end": 52.105,
+    "line_index": 18,
+    "confidence": 0.633
+  },
+  {
+    "lyric": "I can't call it, the beats make me fallin' asleep",
+    "start": 52.368,
+    "end": 55.0,
+    "line_index": 19,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "I keep fallin' (I keep fallin'), but never fallin' six feet deep",
+    "start": 54.412,
+    "end": 57.941,
+    "line_index": 20,
+    "confidence": 0.637
+  },
+  {
+    "lyric": "I'm out for presidents to represent me (say what?)",
+    "start": 58.103,
+    "end": 61.207,
+    "line_index": 21,
+    "confidence": 0.739
+  },
+  {
+    "lyric": "I'm out for dead presidents to represent me",
+    "start": 57.759,
+    "end": 60.517,
+    "line_index": 23,
+    "confidence": 0.85
+  },
+  {
+    "lyric": "To my man Ill Will, God bless your life (it's yours)",
+    "start": 85.0,
+    "end": 89.0,
+    "line_index": 33,
+    "confidence": 0.777
+  },
+  {
+    "lyric": "To my peoples throughout Queens, God bless your life",
+    "start": 90.625,
+    "end": 93.438,
+    "line_index": 34,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "I trip, we box up crazy bitches, aimin' guns in all my baby pictures",
+    "start": 93.125,
+    "end": 97.125,
+    "line_index": 35,
+    "confidence": 0.546
+  },
+  {
+    "lyric": "Beef with housing police, release scriptures that's maybe Hitler's",
+    "start": 97.188,
+    "end": 100.0,
+    "line_index": 36,
+    "confidence": 0.633
+  },
+  {
+    "lyric": "Yet I'm the mild, money-gettin' style, rollin' foul",
+    "start": 145.0,
+    "end": 149.0,
+    "line_index": 37,
+    "confidence": 0.432
+  },
+  {
+    "lyric": "The versatile, honey-stickin', wild, golden child",
+    "start": 102.727,
+    "end": 104.545,
+    "line_index": 38,
+    "confidence": 0.567
+  },
+  {
+    "lyric": "Dwellin' in the Rotten Apple, you get tackled",
+    "start": 104.848,
+    "end": 107.273,
+    "line_index": 39,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Or caught by the devil's lasso, shit is a hassle",
+    "start": 107.162,
+    "end": 109.865,
+    "line_index": 40,
+    "confidence": 0.76
+  },
+  {
+    "lyric": "There's no days for broke days when sellin' smoke pays",
+    "start": 109.865,
+    "end": 112.568,
+    "line_index": 41,
+    "confidence": 0.385
+  },
+  {
+    "lyric": "While all the old folks pray to Jes\u00fas, soakin' they sins in trays",
+    "start": 113.0,
+    "end": 116.25,
+    "line_index": 42,
+    "confidence": 0.877
+  },
+  {
+    "lyric": "Of holy water, odds against Nas is slaughter",
+    "start": 146.111,
+    "end": 150.111,
+    "line_index": 43,
+    "confidence": 0.361
+  },
+  {
+    "lyric": "Thinkin' a word best describin' my life to name my daughter",
+    "start": 119.048,
+    "end": 121.667,
+    "line_index": 44,
+    "confidence": 0.518
+  },
+  {
+    "lyric": "My strength, my son, the star will be my resurrection",
+    "start": 121.667,
+    "end": 124.048,
+    "line_index": 45,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Born in correction, all the wrong shit I did, he'll lead in right direction",
+    "start": 123.846,
+    "end": 127.436,
+    "line_index": 46,
+    "confidence": 0.882
+  },
+  {
+    "lyric": "How you livin'? Large or broke on charge cards and mediocre?",
+    "start": 127.179,
+    "end": 130.0,
+    "line_index": 47,
+    "confidence": 0.618
+  },
+  {
+    "lyric": "You flippin' coke or playin' spit, spades, and strip poker?",
+    "start": 131.296,
+    "end": 135.0,
+    "line_index": 48,
+    "confidence": 0.68
+  },
+  {
+    "lyric": "I'm the young city bandit, hold myself down single-handed",
+    "start": 175.556,
+    "end": 179.556,
+    "line_index": 63,
+    "confidence": 0.491
+  },
+  {
+    "lyric": "For murder raps, I kick my thoughts alone, get remanded",
+    "start": 179.444,
+    "end": 183.444,
+    "line_index": 64,
+    "confidence": 0.76
+  },
+  {
+    "lyric": "Born alone, die alone, no crew to keep my crown or throne",
+    "start": 184.286,
+    "end": 187.714,
+    "line_index": 65,
+    "confidence": 0.792
+  },
+  {
+    "lyric": "I'm deep by sound alone, caved inside, a thousand miles from home",
+    "start": 235.0,
+    "end": 239.0,
+    "line_index": 66,
+    "confidence": 0.368
+  },
+  {
+    "lyric": "I need a new nigga for this black cloud to follow",
+    "start": 190.227,
+    "end": 192.727,
+    "line_index": 67,
+    "confidence": 0.864
+  },
+  {
+    "lyric": "'Cause while it's over me it's too dark to see tomorrow",
+    "start": 192.821,
+    "end": 195.641,
+    "line_index": 68,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Tryin' to maintain, I flip, fill the clip to the tip",
+    "start": 195.385,
+    "end": 198.205,
+    "line_index": 69,
+    "confidence": 0.691
+  },
+  {
+    "lyric": "Picturin' my peeps not eatin' can make my heartbeat skip",
+    "start": 198.023,
+    "end": 200.349,
+    "line_index": 70,
+    "confidence": 0.38
+  },
+  {
+    "lyric": "And I'm amped up, they locked the champ up, even my brain's in handcuffs",
+    "start": 200.581,
+    "end": 203.837,
+    "line_index": 71,
+    "confidence": 0.654
+  },
+  {
+    "lyric": "Headed for Indiana, stabbin' women like the Phantom",
+    "start": 204.857,
+    "end": 207.143,
+    "line_index": 72,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "The crew is lampin' Big Willie style",
+    "start": 207.143,
+    "end": 209.143,
+    "line_index": 73,
+    "confidence": 0.814
+  },
+  {
+    "lyric": "Check the chip-toothed smile, plus I profile wild",
+    "start": 208.889,
+    "end": 211.111,
+    "line_index": 74,
+    "confidence": 0.425
+  },
+  {
+    "lyric": "Stash loot in fly clothes, burnin' dollars to light my stoge",
+    "start": 211.667,
+    "end": 214.722,
+    "line_index": 75,
+    "confidence": 0.605
+  },
+  {
+    "lyric": "Walk the blocks with a bop, checkin' dames, plus the games people play",
+    "start": 214.474,
+    "end": 217.895,
+    "line_index": 76,
+    "confidence": 0.708
+  },
+  {
+    "lyric": "Bust the problems of the world today",
+    "start": 218.158,
+    "end": 220.0,
+    "line_index": 77,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "To everybody in Queens, the foundation (it's yours)",
+    "start": 245.0,
+    "end": 249.0,
+    "line_index": 88,
+    "confidence": 0.647
+  },
+  {
+    "lyric": "The world is yours",
+    "start": 0.0,
+    "end": 3.333,
+    "line_index": 89,
+    "confidence": 0.95
+  }
+]

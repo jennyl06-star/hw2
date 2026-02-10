@@ -1,0 +1,32 @@
+# OS
+.DS_Store
+
+# Env / secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# GTZAN dataset (download separately — don't commit 1.3 GB)
+phase-1-classify/data/gtzan/genres_original/
+phase-1-classify/data/gtzan/images_original/
+phase-1-classify/data/gtzan/z-issue/
+
+# Full-length songs & source videos (too large, not your own code)
+phase-3-performance/rap_full_songs/
+phase-3-performance/rap_videos/
+phase-3-performance/podcast_videos/
+
+# Large podcast WAVs (keep one or two if needed for demo)
+phase-3-performance/podcast_60min.wav
+phase-3-performance/podcast_wsj.wav
+
+# Zip archive (redundant with the directory)
+phase-3-performance.zip
+
+# ChuGL / imgui state
+imgui.ini
+
+# uv lock (optional — remove this line if you want reproducible builds)
+# uv.lock

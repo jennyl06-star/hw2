@@ -1,0 +1,205 @@
+[
+  {
+    "lyric": "Nobody pray for me",
+    "start": 6.757,
+    "end": 7.357,
+    "line_index": 0,
+    "confidence": 0.241
+  },
+  {
+    "lyric": "It been that day for me",
+    "start": 30.526,
+    "end": 32.105,
+    "line_index": 1,
+    "confidence": 0.425
+  },
+  {
+    "lyric": "Ay, I remember syrup sandwiches and crime allowances",
+    "start": 13.158,
+    "end": 17.158,
+    "line_index": 3,
+    "confidence": 0.712
+  },
+  {
+    "lyric": "Finessin' on 'em with some counterfeits, but now I'm countin' this",
+    "start": 17.222,
+    "end": 21.222,
+    "line_index": 4,
+    "confidence": 0.691
+  },
+  {
+    "lyric": "Parmesan where my accountant lives in fact, I'm downin' this",
+    "start": 21.296,
+    "end": 25.0,
+    "line_index": 5,
+    "confidence": 0.57
+  },
+  {
+    "lyric": "D'uss\u00e9 with my boo bae, taste like Kool-Aid for the analysts",
+    "start": 25.135,
+    "end": 28.108,
+    "line_index": 6,
+    "confidence": 0.518
+  },
+  {
+    "lyric": "Girl, I can buy yo' waist the world with my paystub",
+    "start": 23.514,
+    "end": 26.486,
+    "line_index": 7,
+    "confidence": 0.464
+  },
+  {
+    "lyric": "I know that it's good, won't you sit it on my taste bloods?",
+    "start": 30.588,
+    "end": 34.412,
+    "line_index": 8,
+    "confidence": 0.458
+  },
+  {
+    "lyric": "I get way too petty once you let me do the extras",
+    "start": 33.947,
+    "end": 37.105,
+    "line_index": 9,
+    "confidence": 0.712
+  },
+  {
+    "lyric": "Pull up on your block, then break it down, we playin' Tetris",
+    "start": 37.353,
+    "end": 40.882,
+    "line_index": 10,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "If I quit your BM, I still ride Mercedes, funk",
+    "start": 46.875,
+    "end": 50.0,
+    "line_index": 13,
+    "confidence": 0.76
+  },
+  {
+    "lyric": "If I quit this season, I still be the greatest, funk",
+    "start": 50.0,
+    "end": 54.0,
+    "line_index": 14,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "My left stroke just went viral",
+    "start": 54.231,
+    "end": 56.538,
+    "line_index": 15,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Right stroke put lil' baby in a spiral",
+    "start": 56.538,
+    "end": 59.615,
+    "line_index": 16,
+    "confidence": 0.831
+  },
+  {
+    "lyric": "Soprano C, we like to keep it on a high note",
+    "start": 57.963,
+    "end": 61.963,
+    "line_index": 17,
+    "confidence": 0.695
+  },
+  {
+    "lyric": "It's levels to it, you and I know",
+    "start": 62.037,
+    "end": 65.0,
+    "line_index": 18,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "I make a play blowin' up your whole life",
+    "start": 100.556,
+    "end": 103.889,
+    "line_index": 30,
+    "confidence": 0.739
+  },
+  {
+    "lyric": "I'm so-so sick and tired of the Photoshop",
+    "start": 104.167,
+    "end": 107.5,
+    "line_index": 31,
+    "confidence": 0.744
+  },
+  {
+    "lyric": "Show me somethin' natural like afro on Richard Pryor",
+    "start": 107.069,
+    "end": 110.172,
+    "line_index": 32,
+    "confidence": 0.633
+  },
+  {
+    "lyric": "Show me somethin' natural, I wanna feel some stretch marks",
+    "start": 110.172,
+    "end": 113.621,
+    "line_index": 33,
+    "confidence": 0.665
+  },
+  {
+    "lyric": "Still'll take you down right on yo' mama couch in Polo sock",
+    "start": 113.056,
+    "end": 116.389,
+    "line_index": 34,
+    "confidence": 0.475
+  },
+  {
+    "lyric": "Ay, this is way too crazy, ay, you do not amaze me, ay",
+    "start": 116.842,
+    "end": 120.263,
+    "line_index": 35,
+    "confidence": 0.877
+  },
+  {
+    "lyric": "I blew cool from AC, ay, Obama just paged me, ay",
+    "start": 120.789,
+    "end": 123.684,
+    "line_index": 36,
+    "confidence": 0.68
+  },
+  {
+    "lyric": "I don't fabricate it, ay, most of y'all be fakin', ay",
+    "start": 123.429,
+    "end": 126.571,
+    "line_index": 37,
+    "confidence": 0.777
+  },
+  {
+    "lyric": "I stay modest 'bout it, ay, she elaborate it, ay",
+    "start": 126.944,
+    "end": 129.722,
+    "line_index": 38,
+    "confidence": 0.665
+  },
+  {
+    "lyric": "This that Grey Poupon, that Evian, that TED Talk, ay",
+    "start": 130.278,
+    "end": 133.056,
+    "line_index": 39,
+    "confidence": 0.76
+  },
+  {
+    "lyric": "Watch my soul speak, you let the meds talk, ay",
+    "start": 130.278,
+    "end": 133.056,
+    "line_index": 40,
+    "confidence": 0.765
+  },
+  {
+    "lyric": "I'm the realest, um, after all",
+    "start": 139.8,
+    "end": 142.2,
+    "line_index": 42,
+    "confidence": 0.567
+  },
+  {
+    "lyric": "Tell 'em, be humble (hol' up), sit down (hol' up, hol' up, lil', hol' up, lil')",
+    "start": 62.5,
+    "end": 66.5,
+    "line_index": 19,
+    "confidence": 0.378
+  }
+]

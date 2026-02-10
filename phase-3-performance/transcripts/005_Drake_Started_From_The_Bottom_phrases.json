@@ -1,0 +1,58 @@
+[
+  {
+    "lyric": "Started from the bottom now we're here",
+    "start": 10.0,
+    "end": 12.692,
+    "line_index": 2,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Started from the bottom now my whole team fuckin' here",
+    "start": 12.692,
+    "end": 16.538,
+    "line_index": 3,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Started from the bottom now the whole team here, nigga",
+    "start": 19.138,
+    "end": 22.586,
+    "line_index": 5,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Started from the bottom now my whole team here, nigga",
+    "start": 25.0,
+    "end": 27.857,
+    "line_index": 7,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "I done kept it real from the jump",
+    "start": 32.714,
+    "end": 35.0,
+    "line_index": 10,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Livin' at my momma's house we'd argue every month",
+    "start": 35.455,
+    "end": 38.182,
+    "line_index": 11,
+    "confidence": 0.739
+  },
+  {
+    "lyric": "Nigga, I was tryna get it on my own",
+    "start": 38.103,
+    "end": 41.207,
+    "line_index": 12,
+    "confidence": 0.844
+  },
+  {
+    "lyric": "Workin' all night, traffic on the way home",
+    "start": 41.207,
+    "end": 43.966,
+    "line_index": 13,
+    "confidence": 0.95
+  }
+]

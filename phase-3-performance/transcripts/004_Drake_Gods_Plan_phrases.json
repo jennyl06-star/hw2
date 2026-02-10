@@ -1,0 +1,79 @@
+[
+  {
+    "lyric": "I been movin' calm, don't start no trouble with me",
+    "start": 115.0,
+    "end": 119.0,
+    "line_index": 2,
+    "confidence": 0.563
+  },
+  {
+    "lyric": "Tryna keep it peaceful is a struggle for me",
+    "start": 51.212,
+    "end": 53.939,
+    "line_index": 3,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Don't pull up at 6 a.m. to cuddle with me",
+    "start": 125.161,
+    "end": 128.387,
+    "line_index": 4,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "You know how I like it when you lovin' on me",
+    "start": 128.333,
+    "end": 132.0,
+    "line_index": 5,
+    "confidence": 0.777
+  },
+  {
+    "lyric": "I don't wanna die for them to miss me",
+    "start": 55.0,
+    "end": 59.0,
+    "line_index": 6,
+    "confidence": 1.0
+  },
+  {
+    "lyric": "Yes, I see the things that they wishin' on me",
+    "start": 63.333,
+    "end": 67.037,
+    "line_index": 7,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Hope I got some brothers that outlive me",
+    "start": 67.308,
+    "end": 70.385,
+    "line_index": 8,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "They gon' tell the story, shit was different with me",
+    "start": 140.0,
+    "end": 144.0,
+    "line_index": 9,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "I make sure that north-side eat",
+    "start": 94.286,
+    "end": 98.286,
+    "line_index": 16,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Bad things, it's a lot of bad things",
+    "start": 166.429,
+    "end": 170.429,
+    "line_index": 18,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "They wishin' on me",
+    "start": 65.556,
+    "end": 67.037,
+    "line_index": 20,
+    "confidence": 0.95
+  }
+]

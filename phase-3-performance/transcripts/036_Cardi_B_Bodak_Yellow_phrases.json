@@ -1,0 +1,345 @@
+[
+  {
+    "lyric": "Said, \"I'm the shit, they can't fuck with me if they wanted to\"",
+    "start": 10.0,
+    "end": 14.0,
+    "line_index": 2,
+    "confidence": 0.629
+  },
+  {
+    "lyric": "Said, \"Lil bitch, you can't fuck with me if you wanted to\"",
+    "start": 10.0,
+    "end": 14.0,
+    "line_index": 4,
+    "confidence": 0.773
+  },
+  {
+    "lyric": "These expensive, these is red bottoms, these is bloody shoes",
+    "start": 110.238,
+    "end": 114.238,
+    "line_index": 5,
+    "confidence": 0.855
+  },
+  {
+    "lyric": "Hit the store, I can get 'em both, I don't wanna choose",
+    "start": 22.5,
+    "end": 26.25,
+    "line_index": 6,
+    "confidence": 0.792
+  },
+  {
+    "lyric": "And I'm quick, cut a nigga off, so don't get comfortable, look",
+    "start": 27.0,
+    "end": 31.0,
+    "line_index": 7,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "I don't dance now, I make money moves",
+    "start": 31.8,
+    "end": 35.0,
+    "line_index": 8,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "If I see you and I don't speak, that means I don't fuck with you",
+    "start": 128.793,
+    "end": 132.793,
+    "line_index": 10,
+    "confidence": 0.695
+  },
+  {
+    "lyric": "I'm a boss, you a worker, bitch, I make bloody moves",
+    "start": 134.194,
+    "end": 137.742,
+    "line_index": 11,
+    "confidence": 0.864
+  },
+  {
+    "lyric": "Now she say she gon' do what to who?",
+    "start": 45.606,
+    "end": 48.333,
+    "line_index": 12,
+    "confidence": 0.739
+  },
+  {
+    "lyric": "Cardi B, you know where I'm at, you know where I be",
+    "start": 49.848,
+    "end": 53.485,
+    "line_index": 14,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "You in the club just to party, I'm there, I get paid a fee",
+    "start": 52.857,
+    "end": 56.857,
+    "line_index": 15,
+    "confidence": 0.882
+  },
+  {
+    "lyric": "Honestly, don't give a fuck 'bout who ain't fond of me",
+    "start": 61.944,
+    "end": 65.0,
+    "line_index": 18,
+    "confidence": 0.691
+  },
+  {
+    "lyric": "Dropped two mixtapes in six months",
+    "start": 64.857,
+    "end": 66.571,
+    "line_index": 19,
+    "confidence": 0.475
+  },
+  {
+    "lyric": "What bitch working as hard as me?",
+    "start": 67.121,
+    "end": 69.242,
+    "line_index": 20,
+    "confidence": 0.679
+  },
+  {
+    "lyric": "They see pictures, they say, \"Goals\"",
+    "start": 72.879,
+    "end": 74.697,
+    "line_index": 23,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Bitch, I'm who they tryna be",
+    "start": 74.0,
+    "end": 75.714,
+    "line_index": 24,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Look, I might just chill in some BAPE",
+    "start": 75.714,
+    "end": 78.0,
+    "line_index": 25,
+    "confidence": 0.475
+  },
+  {
+    "lyric": "My pussy feel like a lake",
+    "start": 80.714,
+    "end": 82.429,
+    "line_index": 28,
+    "confidence": 0.792
+  },
+  {
+    "lyric": "He wanna swim with his face, I'm like, \"Okay\"",
+    "start": 82.429,
+    "end": 85.0,
+    "line_index": 29,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "I'll let him get what he want",
+    "start": 80.8,
+    "end": 83.6,
+    "line_index": 30,
+    "confidence": 0.814
+  },
+  {
+    "lyric": "He buy me Yves Saint Laurent",
+    "start": 83.6,
+    "end": 86.0,
+    "line_index": 31,
+    "confidence": 0.475
+  },
+  {
+    "lyric": "And the new whip, when I go fast as a horse",
+    "start": 88.333,
+    "end": 90.952,
+    "line_index": 32,
+    "confidence": 0.777
+  },
+  {
+    "lyric": "I'm the hottest in the street",
+    "start": 92.619,
+    "end": 94.048,
+    "line_index": 34,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Got a bag and fixed my teeth",
+    "start": 95.286,
+    "end": 97.286,
+    "line_index": 36,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Hope you hoes know it ain't cheap",
+    "start": 97.429,
+    "end": 99.429,
+    "line_index": 37,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "And I pay my mama bills",
+    "start": 99.286,
+    "end": 101.0,
+    "line_index": 38,
+    "confidence": 0.792
+  },
+  {
+    "lyric": "I ain't got no time to chill",
+    "start": 101.0,
+    "end": 103.0,
+    "line_index": 39,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Think these hoes be mad at me",
+    "start": 103.438,
+    "end": 105.625,
+    "line_index": 40,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Their baby father run a bill",
+    "start": 55.143,
+    "end": 56.857,
+    "line_index": 41,
+    "confidence": 0.317
+  },
+  {
+    "lyric": "If you a pussy, you get popped",
+    "start": 137.742,
+    "end": 140.0,
+    "line_index": 50,
+    "confidence": 0.85
+  },
+  {
+    "lyric": "You a goofy, you a opp",
+    "start": 139.688,
+    "end": 141.562,
+    "line_index": 51,
+    "confidence": 0.792
+  },
+  {
+    "lyric": "Don't you come around my way",
+    "start": 141.471,
+    "end": 143.235,
+    "line_index": 52,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "You can't hang around my block",
+    "start": 143.235,
+    "end": 145.0,
+    "line_index": 53,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Turns out, I'm rich, I'm rich, I'm rich",
+    "start": 146.765,
+    "end": 149.118,
+    "line_index": 55,
+    "confidence": 0.712
+  },
+  {
+    "lyric": "I say I get the money and go",
+    "start": 25.0,
+    "end": 28.2,
+    "line_index": 58,
+    "confidence": 0.607
+  },
+  {
+    "lyric": "My pussy glitter as gold",
+    "start": 156.585,
+    "end": 157.805,
+    "line_index": 60,
+    "confidence": 0.76
+  },
+  {
+    "lyric": "Tell that lil' bitch play her role",
+    "start": 157.805,
+    "end": 159.512,
+    "line_index": 61,
+    "confidence": 0.543
+  },
+  {
+    "lyric": "I just arrove in a Rolls",
+    "start": 160.638,
+    "end": 161.915,
+    "line_index": 62,
+    "confidence": 0.708
+  },
+  {
+    "lyric": "I just came up in a Wraith",
+    "start": 160.638,
+    "end": 162.128,
+    "line_index": 63,
+    "confidence": 0.729
+  },
+  {
+    "lyric": "No, I need to fill up the safe",
+    "start": 163.617,
+    "end": 165.319,
+    "line_index": 65,
+    "confidence": 0.831
+  },
+  {
+    "lyric": "I need to let all these hoes know that none of their niggas is safe",
+    "start": 165.319,
+    "end": 168.511,
+    "line_index": 66,
+    "confidence": 0.697
+  },
+  {
+    "lyric": "Only the real can relate",
+    "start": 170.122,
+    "end": 171.341,
+    "line_index": 68,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Now it's a crib with a gate",
+    "start": 39.242,
+    "end": 41.364,
+    "line_index": 70,
+    "confidence": 0.425
+  },
+  {
+    "lyric": "Rollie got charms, look like Frosted Flakes",
+    "start": 175.0,
+    "end": 179.0,
+    "line_index": 71,
+    "confidence": 0.314
+  },
+  {
+    "lyric": "Had to let these bitches know",
+    "start": 165.532,
+    "end": 166.809,
+    "line_index": 72,
+    "confidence": 0.567
+  },
+  {
+    "lyric": "I just run and check the mail",
+    "start": 175.0,
+    "end": 179.0,
+    "line_index": 74,
+    "confidence": 0.737
+  },
+  {
+    "lyric": "Let's find out and see",
+    "start": 48.333,
+    "end": 50.0,
+    "line_index": 13,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "I know they're tired of me",
+    "start": 59.722,
+    "end": 61.389,
+    "line_index": 17,
+    "confidence": 0.792
+  },
+  {
+    "lyric": "I don't bother with these hoes",
+    "start": 69.242,
+    "end": 71.061,
+    "line_index": 21,
+    "confidence": 0.95
+  }
+]

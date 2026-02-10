@@ -1,0 +1,352 @@
+[
+  {
+    "lyric": "I ain't got no motherfuckin' friends (sucka-ass)",
+    "start": 85.256,
+    "end": 87.051,
+    "line_index": 0,
+    "confidence": 0.364
+  },
+  {
+    "lyric": "That's why I fucked yo' bitch, you fat motherfucker",
+    "start": 3.158,
+    "end": 7.158,
+    "line_index": 1,
+    "confidence": 0.567
+  },
+  {
+    "lyric": "First off, fuck your bitch and the clique you claim",
+    "start": 10.0,
+    "end": 13.846,
+    "line_index": 6,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Westside when we ride, come equipped with game",
+    "start": 13.846,
+    "end": 16.923,
+    "line_index": 7,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "You claim to be a player but I fucked your wife",
+    "start": 18.421,
+    "end": 21.316,
+    "line_index": 8,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "We bust on Bad Boy niggas fucked for life",
+    "start": 21.316,
+    "end": 23.684,
+    "line_index": 9,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Plus, Puffy tryin' to see me weak hearts I rip",
+    "start": 18.158,
+    "end": 20.789,
+    "line_index": 10,
+    "confidence": 0.425
+  },
+  {
+    "lyric": "Biggie Smalls and Junior M.A.F.I.A. some mark-ass bitches",
+    "start": 26.0,
+    "end": 28.286,
+    "line_index": 11,
+    "confidence": 0.744
+  },
+  {
+    "lyric": "We keep on comin' while we runnin' for yo' jewels",
+    "start": 28.421,
+    "end": 31.053,
+    "line_index": 12,
+    "confidence": 0.76
+  },
+  {
+    "lyric": "Steady gunnin', keep on bustin' at them fools, you know the rules",
+    "start": 31.053,
+    "end": 34.211,
+    "line_index": 13,
+    "confidence": 0.792
+  },
+  {
+    "lyric": "Lil' Ceaser, go ask ya homie how I leave ya",
+    "start": 33.81,
+    "end": 36.19,
+    "line_index": 14,
+    "confidence": 0.665
+  },
+  {
+    "lyric": "Cut your young ass up, leave you in pieces, now be deceased",
+    "start": 36.19,
+    "end": 39.048,
+    "line_index": 15,
+    "confidence": 0.871
+  },
+  {
+    "lyric": "Lil' Kim, don't fuck around with real G's",
+    "start": 39.286,
+    "end": 41.19,
+    "line_index": 16,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Quick to snatch yo' ugly ass off the streets, so fuck peace",
+    "start": 41.19,
+    "end": 44.048,
+    "line_index": 17,
+    "confidence": 0.871
+  },
+  {
+    "lyric": "I let them niggas know it's on for life",
+    "start": 44.706,
+    "end": 47.353,
+    "line_index": 18,
+    "confidence": 0.844
+  },
+  {
+    "lyric": "Bad Boy murdered on wax and killed",
+    "start": 48.667,
+    "end": 51.0,
+    "line_index": 20,
+    "confidence": 0.814
+  },
+  {
+    "lyric": "Fuck wit' me and get yo' caps peeled, you know, see",
+    "start": 50.667,
+    "end": 54.333,
+    "line_index": 21,
+    "confidence": 0.464
+  },
+  {
+    "lyric": "Grab ya Glocks when you see Tupac",
+    "start": 50.0,
+    "end": 54.0,
+    "line_index": 22,
+    "confidence": 0.679
+  },
+  {
+    "lyric": "Who shot me? But ya punks didn't finish",
+    "start": 58.03,
+    "end": 60.455,
+    "line_index": 24,
+    "confidence": 0.712
+  },
+  {
+    "lyric": "Now ya 'bout to feel the wrath of a menace",
+    "start": 60.455,
+    "end": 63.485,
+    "line_index": 25,
+    "confidence": 0.855
+  },
+  {
+    "lyric": "Nigga, I hit em' up",
+    "start": 63.485,
+    "end": 65.0,
+    "line_index": 26,
+    "confidence": 0.76
+  },
+  {
+    "lyric": "Check this out, you motherfuckers know what time it is (take money)",
+    "start": 66.471,
+    "end": 70.0,
+    "line_index": 27,
+    "confidence": 0.567
+  },
+  {
+    "lyric": "Y'all niggas ain't even on my level",
+    "start": 66.0,
+    "end": 68.8,
+    "line_index": 29,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "I'ma let my little homies ride on you (take money)",
+    "start": 71.765,
+    "end": 74.706,
+    "line_index": 30,
+    "confidence": 0.76
+  },
+  {
+    "lyric": "Biggie Smalls just got dropped",
+    "start": 76.0,
+    "end": 78.0,
+    "line_index": 33,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Little Mu', pass the MAC and let me hit him in his back",
+    "start": 77.424,
+    "end": 81.364,
+    "line_index": 34,
+    "confidence": 0.731
+  },
+  {
+    "lyric": "Frank White need to get spanked right for settin' traps",
+    "start": 81.364,
+    "end": 84.394,
+    "line_index": 35,
+    "confidence": 0.665
+  },
+  {
+    "lyric": "Little accident murderers and I ain't never heard of ya",
+    "start": 84.595,
+    "end": 87.297,
+    "line_index": 36,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Poisonous gats attack when I'm servin' ya",
+    "start": 87.568,
+    "end": 89.459,
+    "line_index": 37,
+    "confidence": 0.679
+  },
+  {
+    "lyric": "Spank ya, shank ya whole style when I gank",
+    "start": 89.103,
+    "end": 91.41,
+    "line_index": 38,
+    "confidence": 0.531
+  },
+  {
+    "lyric": "Guard your rank 'cause I'ma slam your ass in the paint",
+    "start": 91.0,
+    "end": 93.75,
+    "line_index": 39,
+    "confidence": 0.68
+  },
+  {
+    "lyric": "Puffy weaker than the fuckin' block I'm runnin' through, nigga",
+    "start": 93.75,
+    "end": 96.25,
+    "line_index": 40,
+    "confidence": 0.665
+  },
+  {
+    "lyric": "And I'm smokin' Junior M.A.F.I.A. in front of you, nigga",
+    "start": 96.5,
+    "end": 99.0,
+    "line_index": 41,
+    "confidence": 0.765
+  },
+  {
+    "lyric": "Ya clout petty sour, I push packages every hour, hit 'em up",
+    "start": 100.0,
+    "end": 104.0,
+    "line_index": 43,
+    "confidence": 0.387
+  },
+  {
+    "lyric": "Peep how we do it, keep it real as penitentiary steel",
+    "start": 110.0,
+    "end": 114.0,
+    "line_index": 49,
+    "confidence": 0.512
+  },
+  {
+    "lyric": "All you niggas gettin' killed with ya mouths open",
+    "start": 118.5,
+    "end": 120.75,
+    "line_index": 51,
+    "confidence": 0.844
+  },
+  {
+    "lyric": "Tryna come up offa me, you in the clouds hopin'",
+    "start": 121.0,
+    "end": 123.5,
+    "line_index": 52,
+    "confidence": 0.68
+  },
+  {
+    "lyric": "But they burn, motherfucker, you deserve to die",
+    "start": 126.857,
+    "end": 129.143,
+    "line_index": 54,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Talkin' 'bout you gettin' money but it's funny to me",
+    "start": 128.784,
+    "end": 131.486,
+    "line_index": 55,
+    "confidence": 0.855
+  },
+  {
+    "lyric": "All you niggas livin' bummy why you fuckin' with me?",
+    "start": 132.0,
+    "end": 135.333,
+    "line_index": 56,
+    "confidence": 0.661
+  },
+  {
+    "lyric": "I'm a self-made millionaire",
+    "start": 135.667,
+    "end": 137.0,
+    "line_index": 57,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Thug livin' outta prison, pistols in the air",
+    "start": 137.333,
+    "end": 140.0,
+    "line_index": 58,
+    "confidence": 0.744
+  },
+  {
+    "lyric": "Biggie, remember when I used to let you sleep on the couch",
+    "start": 135.37,
+    "end": 139.37,
+    "line_index": 59,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "And beg a bitch to let you sleep in the house?",
+    "start": 139.815,
+    "end": 143.815,
+    "line_index": 60,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Now it's all about Versace, you copied my style",
+    "start": 144.884,
+    "end": 146.977,
+    "line_index": 61,
+    "confidence": 0.844
+  },
+  {
+    "lyric": "Five shots couldn't drop me, I took it and smiled",
+    "start": 146.977,
+    "end": 149.302,
+    "line_index": 62,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Now I'm 'bout to set the record straight",
+    "start": 148.889,
+    "end": 151.111,
+    "line_index": 63,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "With my AK, I'm still the thug that you love to hate",
+    "start": 151.111,
+    "end": 154.444,
+    "line_index": 64,
+    "confidence": 0.95
+  },
+  {
+    "lyric": "Motherfucker, I hit 'em up",
+    "start": 63.485,
+    "end": 65.0,
+    "line_index": 65,
+    "confidence": 0.57
+  },
+  {
+    "lyric": "Where plenty murders occurs",
+    "start": 152.857,
+    "end": 154.762,
+    "line_index": 67,
+    "confidence": 0.95
+  }
+]
